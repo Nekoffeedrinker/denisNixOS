@@ -118,14 +118,17 @@
     # List packages installed in system profile. To search, run:
     # $ nix search wget
     environment.systemPackages = with pkgs; [
-      # Terminal
+      # Terminal (cli)
       btop # monitor de recursos
+      fastfetch
       git
       kitty
+      lf # explorador de archivos en terminal
       neovim
       ncdu # analizar el espacio en disco
       stow
       syncthing
+      tree # arbol de directorios
       typst
       wget
       zsh
@@ -137,6 +140,7 @@
       emacs
       localsend
       obsidian
+      tangram # contenedor para webapps
 
       # Requerido por Doom Emacs
       ripgrep # regex pattern directory searcher
