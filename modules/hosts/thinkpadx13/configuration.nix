@@ -89,9 +89,8 @@
       isNormalUser = true;
       description = "Denis Pilar";
       extraGroups = [ "networkmanager" "wheel" ];
-      #shell = pkgs.zsh;
       packages = with pkgs; [
-      #  thunderbird
+      #  añadir paquetes solo para el usuario
       ];
     };
   
