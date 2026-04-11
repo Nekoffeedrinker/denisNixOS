@@ -154,7 +154,7 @@
     # };
  
 
-	# ==================== Entorno de escritorio ==================== 
+   # ==================== Entorno de escritorio ==================== 
 
     # Enable the X11 windowing system.
     services.xserver.enable = true;
@@ -163,9 +163,27 @@
     services.xserver.displayManager.gdm.enable = true;
     services.xserver.desktopManager.gnome.enable = true;
   
- 
+
+    # ==================== Variables de entorno ====================
+    
+    environment.sessionVariables = {
+      PATH = [ "$HOME/.emacs.d/bin" ];
+    };
+
+
     # ==================== Servicios ====================
  
+    # Iniciar Syncthing
+    #services = {
+    #    syncthing = {
+    #        enable = true;
+    #        user = "denis";
+    #        group = "users";
+    #        dataDir = "/mnt/GATOS/Syncthing";    # Default folder for new synced folders
+    #        configDir = "/mnt/GATOS/.config/syncthing";   # Folder for Syncthing's settings and keys
+    #    };
+    #};
+  
     # Enable the OpenSSH daemon.
     # services.openssh.enable = true;
   
