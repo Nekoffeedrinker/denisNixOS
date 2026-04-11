@@ -140,7 +140,7 @@
       # Requerido por Doom Emacs
       ripgrep    # regex pattern directory searcher
       fd         # better `find`
-      Symbola    # Fuente
+      symbola    # Fuente
       nerd-fonts.symbols-only
       shellcheck
       pandoc
