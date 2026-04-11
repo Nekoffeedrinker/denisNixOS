@@ -136,6 +136,22 @@
       emacs
       localsend
       obsidian
+
+      # Requerido por Doom Emacs
+      ripgrep    # regex pattern directory searcher
+      fd         # better `find`
+      Symbola    # Fuente
+      nerd-fonts.symbols-only
+      shellcheck
+      pandoc
+
+      # Tipografías
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.monaspace
+      inter
+      public-sans
+      libertinus
+      courier-prime
     ];
   
     # Install firefox.
