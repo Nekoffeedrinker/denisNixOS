@@ -9,8 +9,9 @@
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-    # Acá inicia la configuración de nix --------------------------
+    # Acá inicia la configuración de nix -------------------------------------
 
+	# ==================== Boot / Hardare ==================== 
 
     # Bootloader.
     boot.loader.systemd-boot.enable = true;
@@ -23,30 +24,7 @@
         efi /EFI/fedora/grubx64.efi
       '';
     };
-  
-    networking.hostName = "nixos"; # Define your hostname.
-    # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  
-    # Configure network proxy if necessary
-    # networking.proxy.default = "http://user:password@proxy:port/";
-    # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-  
-    # Enable networking
-    networking.networkmanager.enable = true;
-  
-    # Set your time zone.
-    time.timeZone = "America/Mazatlan";
-  
-    # Select internationalisation properties.
-    i18n.defaultLocale = "es_MX.UTF-8";
-  
-    # Enable the X11 windowing system.
-    services.xserver.enable = true;
-  
-    # Enable the GNOME Desktop Environment.
-    services.xserver.displayManager.gdm.enable = true;
-    services.xserver.desktopManager.gnome.enable = true;
-  
+ 
     # Configure keymap in X11
     services.xserver.xkb = {
       layout = "us";
@@ -75,7 +53,10 @@
   
     # Enable touchpad support (enabled default in most desktopManager).
     # services.xserver.libinput.enable = true;
-  
+
+
+    # ==================== Puntos de montaje ====================
+
     # Punto de montaje de mi carpeta Gatos
     fileSystems."/mnt/GATOS" = {
       device = "/dev/disk/by-uuid/10d308dd-afc2-4647-99c7-6165285d6e7b";
@@ -83,7 +64,32 @@
       options = [ "defaults" ];
     };
   
+
+    # ==================== Internet / Bluetooth ====================
+
+	# Internet
+    networking.hostName = "nixos"; # Define your hostname.
+    # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   
+    # Configure network proxy if necessary
+    # networking.proxy.default = "http://user:password@proxy:port/";
+    # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  
+    # Enable networking
+    networking.networkmanager.enable = true;
+ 
+
+    # ==================== Localización ====================
+ 
+    # Set your time zone.
+    time.timeZone = "America/Mazatlan";
+  
+    # Select internationalisation properties.
+    i18n.defaultLocale = "es_MX.UTF-8";
+  
+
+    # ==================== Usuarios ====================
+
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.denis = {
       isNormalUser = true;
@@ -95,19 +101,16 @@
     };
   
   
+    # ==================== Seguridad ====================
+
     # Mostrar caracteres de contraseña en el sudo
     security.sudo.extraConfig = ''
       Defaults pwfeedback
     '';
-  
-    # Habilitar Zsh
-    programs.zsh.enable = true;
-    users.defaultUserShell = pkgs.zsh;
-  
-  
-    # Install firefox.
-    programs.firefox.enable = true;
-  
+ 
+
+    # ==================== Paquetes / Programas ====================
+
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
   
@@ -135,6 +138,13 @@
       obsidian
     ];
   
+    # Install firefox.
+    programs.firefox.enable = true;
+  
+    # Habilitar Zsh
+    programs.zsh.enable = true;
+    users.defaultUserShell = pkgs.zsh;
+  
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
     # programs.mtr.enable = true;
@@ -142,9 +152,20 @@
     #   enable = true;
     #   enableSSHSupport = true;
     # };
+ 
+
+	# ==================== Entorno de escritorio ==================== 
+
+    # Enable the X11 windowing system.
+    services.xserver.enable = true;
   
-    # List services that you want to enable:
+    # Enable the GNOME Desktop Environment.
+    services.xserver.displayManager.gdm.enable = true;
+    services.xserver.desktopManager.gnome.enable = true;
   
+ 
+    # ==================== Servicios ====================
+ 
     # Enable the OpenSSH daemon.
     # services.openssh.enable = true;
   
@@ -154,6 +175,9 @@
     # Or disable the firewall altogether.
     # networking.firewall.enable = false;
   
+
+    # ==================== Sistem state version ====================
+
     # This value determines the NixOS release from which the default
     # settings for stateful data, like file locations and database versions
     # on your system were taken. It‘s perfectly fine and recommended to leave
@@ -163,7 +187,7 @@
     system.stateVersion = "25.11"; # Did you read the comment?
 
     
-    # Acá termina la config de nix ---------------------------------
+    # Acá termina la config de nix --------------------------------------------
   
   };
 
