@@ -152,7 +152,14 @@
       public-sans
       libertinus
       courier-prime
+
+      # Relacionado a Nix
+      alejandra  # code formatter
+      nixd       # lsp
     ];
+
+    # Configuración de nixd
+    nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
   
     # Install firefox.
     programs.firefox.enable = true;
