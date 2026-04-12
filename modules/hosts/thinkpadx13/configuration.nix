@@ -154,14 +154,6 @@
       shellcheck
       pandoc
 
-      # Tipografías
-      nerd-fonts.jetbrains-mono
-      nerd-fonts.monaspace
-      inter
-      public-sans
-      libertinus
-      courier-prime
-
       # Relacionado a Nix
       alejandra # code formatter
       nixd # lsp
@@ -184,6 +176,16 @@
     #   enable = true;
     #   enableSSHSupport = true;
     # };
+
+    # Tipografías
+    fonts.packages = with pkgs; [
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.monaspace
+      inter
+      public-sans
+      libertinus
+      courier-prime
+    ];
 
     # ==================== Entorno de escritorio ====================
 
