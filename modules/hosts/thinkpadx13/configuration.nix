@@ -126,6 +126,7 @@
       lf # explorador de archivos en terminal
       neovim
       ncdu # analizar el espacio en disco
+      sl # steam locomotive
       stow
       syncthing
       tree # arbol de directorios
@@ -133,20 +134,17 @@
       wget
       zsh
 
-      # Terminal divertida
-      sl # steam locomotive
-
       # Gui
+      blanket # reproducir sonidos ambientales
       emacs
+      eyedropper
+      inkscape
       localsend
+      lunacy
       obsidian
+      spotify
       tangram # contenedor para webapps
       zapzap
-      spotify
-      lunacy
-      inkscape
-      eyedropper
-      blanket # reproducir sonidos ambientales
 
       # Requerido por Doom Emacs
       ripgrep # regex pattern directory searcher
