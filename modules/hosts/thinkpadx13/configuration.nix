@@ -119,6 +119,7 @@
     # $ nix search wget
     environment.systemPackages = with pkgs; [
       # Terminal (cli)
+      arduino-cli
       btop # monitor de recursos
       fastfetch
       git
@@ -144,6 +145,7 @@
       obsidian
       spotify
       tangram # contenedor para webapps
+      vscode
       zapzap
 
       # Requerido por Doom Emacs
