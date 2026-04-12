@@ -61,7 +61,7 @@
     # Enable touchpad support (enabled default in most desktopManager).
     # services.xserver.libinput.enable = true;
 
-	# Habilitar lector de huellas
+    # Habilitar lector de huellas
     services.fprintd.enable = true;
 
     # ==================== Puntos de montaje ====================
@@ -135,7 +135,7 @@
       syncthing
       tree # arbol de directorios
       typst
-	  usbutils
+      usbutils
       wget
       zsh
 
@@ -211,15 +211,16 @@
     # ==================== Servicios ====================
 
     # Iniciar Syncthing
-    #services = {
-    #    syncthing = {
-    #        enable = true;
-    #        user = "denis";
-    #        group = "users";
-    #        dataDir = "/mnt/GATOS/Syncthing";    # Default folder for new synced folders
-    #        configDir = "/mnt/GATOS/.config/syncthing";   # Folder for Syncthing's settings and keys
-    #    };
-    #};
+    services = {
+      syncthing = {
+        enable = true;
+        user = "denis";
+        group = "users";
+        dataDir = "/mnt/GATOS/Syncthing"; # Default folder for new synced folders
+        configDir = "/mnt/GATOS/.config/syncthing"; # Folder for Syncthing's settings and keys
+        extraFlags = ["--allow-newer-config"];
+      };
+    };
 
     # Enable the OpenSSH daemon.
     # services.openssh.enable = true;
