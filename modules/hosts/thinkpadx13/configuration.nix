@@ -61,6 +61,9 @@
     # Enable touchpad support (enabled default in most desktopManager).
     # services.xserver.libinput.enable = true;
 
+	# Habilitar lector de huellas
+    services.fprintd.enable = true;
+
     # ==================== Puntos de montaje ====================
 
     # Punto de montaje de mi carpeta Gatos
@@ -132,6 +135,7 @@
       syncthing
       tree # arbol de directorios
       typst
+	  usbutils
       wget
       zsh
 
