@@ -141,6 +141,12 @@
       localsend
       obsidian
       tangram # contenedor para webapps
+      zapzap
+      spotify
+      lunacy
+      inkscape
+      eyedropper
+      blanket # reproducir sonidos ambientales
 
       # Requerido por Doom Emacs
       ripgrep # regex pattern directory searcher
