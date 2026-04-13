@@ -3,10 +3,7 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.thinkpadx13Configuration = {
-    pkgs,
-    ...
-  }: {
+  flake.nixosModules.thinkpadx13Configuration = {pkgs, ...}: {
     # import any other modules from here
     imports = [
       self.nixosModules.thinkpadx13Hardware
@@ -40,7 +37,7 @@
     };
 
     # Touchpad
-    services.xserver.libinput.enable = true;
+    services.libinput.enable = true;
 
     # Habilitar lector de huellas
     services.fprintd.enable = true;
@@ -195,8 +192,8 @@
     services.xserver.enable = true;
 
     # Enable the GNOME Desktop Environment.
-    services.xserver.displayManager.gdm.enable = true;
-    services.xserver.desktopManager.gnome.enable = true;
+    services.displayManager.gdm.enable = true;
+    services.desktopManager.gnome.enable = true;
 
     # ==================== Variables de entorno ====================
 
