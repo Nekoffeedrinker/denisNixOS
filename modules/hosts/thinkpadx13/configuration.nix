@@ -11,6 +11,7 @@
     # import any other modules from here
     imports = [
       self.nixosModules.thinkpadx13Hardware
+      self.nixosModules.paquetesDoomEmacs
       #self.nixosModules.niri
     ];
 
@@ -141,7 +142,6 @@
 
       # Gui
       blanket # reproducir sonidos ambientales
-      emacs
       eyedropper
       inkscape
       localsend
@@ -151,14 +151,6 @@
       tangram # contenedor para webapps
       vscode
       zapzap
-
-      # Requerido por Doom Emacs
-      ripgrep # regex pattern directory searcher
-      fd # better `find`
-      symbola # Fuente
-      nerd-fonts.symbols-only
-      shellcheck
-      pandoc
 
       # Relacionado a Nix
       alejandra # code formatter
