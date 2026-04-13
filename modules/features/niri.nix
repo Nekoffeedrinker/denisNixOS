@@ -49,7 +49,7 @@
           };
         };
 
-        "eDP-1" = {
+        outputs."eDP-1" = {
           position = _: {
             props = {
               x = 1920;
@@ -61,7 +61,7 @@
 
         binds = {
           "Mod+Return".spawn-sh = lib.getExe pkgs.kitty;
-          "Mod+Q".close-window = null;
+          "Mod+Q".close-window = _: {};
           # "Mod+D".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
         };
 
