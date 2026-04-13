@@ -9,7 +9,7 @@
       self.nixosModules.thinkpadx13Hardware
       self.nixosModules.paquetesDoomEmacs
       # self.nixosModules.niri
-	  self.nixosModules.denisNiri
+      self.nixosModules.denisNiri
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -145,9 +145,11 @@
       # Gui
       blanket # reproducir sonidos ambientales
       eyedropper
+      gparted
       inkscape
       localsend
       lunacy
+      meld
       obsidian
       spotify
       tangram # contenedor para webapps
