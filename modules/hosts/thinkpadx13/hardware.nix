@@ -1,12 +1,7 @@
 {
-  self,
-  inputs,
-  ...
-}: {
   flake.nixosModules.thinkpadx13Hardware = {
     config,
     lib,
-    pkgs,
     modulesPath,
     ...
   }: {

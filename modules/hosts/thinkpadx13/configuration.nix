@@ -5,7 +5,6 @@
 }: {
   flake.nixosModules.thinkpadx13Configuration = {
     pkgs,
-    lib,
     ...
   }: {
     # import any other modules from here
@@ -33,15 +32,25 @@
       '';
     };
 
-    # Configure keymap in X11
+    # Teclado (en X11)
     services.xserver.xkb = {
       layout = "us";
       variant = "altgr-intl";
       options = "caps:escape_shifted_capslock";
     };
 
+    # Touchpad
+    services.xserver.libinput.enable = true;
+
+    # Habilitar lector de huellas
+    services.fprintd.enable = true;
+
     # Enable CUPS to print documents.
     services.printing.enable = true;
+
+    # Perfil de energía y batería
+    services.power-profiles-daemon.enable = true;
+    services.upower.enable = true;
 
     # Enable sound with pipewire.
     services.pulseaudio.enable = false;
@@ -59,12 +68,6 @@
       #media-session.enable = true;
     };
 
-    # Enable touchpad support (enabled default in most desktopManager).
-    # services.xserver.libinput.enable = true;
-
-    # Habilitar lector de huellas
-    services.fprintd.enable = true;
-
     # ==================== Puntos de montaje ====================
 
     # Punto de montaje de mi carpeta Gatos
@@ -77,15 +80,16 @@
     # ==================== Internet / Bluetooth ====================
 
     # Internet
-    networking.hostName = "nixos"; # Define your hostname.
-    # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    networking.networkmanager.enable = true;
+    networking.wireless.enable = true;
+    networking.hostName = "nixos";
 
-    # Configure network proxy if necessary
+    # Bluetooth
+    hardware.bluetooth.enable = true;
+
+    # Proxy
     # networking.proxy.default = "http://user:password@proxy:port/";
     # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-    # Enable networking
-    networking.networkmanager.enable = true;
 
     # ==================== Localización ====================
 
@@ -102,9 +106,9 @@
       isNormalUser = true;
       description = "Denis Pilar";
       extraGroups = ["networkmanager" "wheel"];
-      packages = with pkgs; [
-        #  añadir paquetes solo para el usuario
-      ];
+      # packages = with pkgs; [
+      #   #  añadir paquetes solo para el usuario
+      # ];
     };
 
     # ==================== Seguridad ====================
