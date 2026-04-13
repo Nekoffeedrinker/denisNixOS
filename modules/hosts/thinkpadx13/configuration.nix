@@ -8,7 +8,7 @@
     imports = [
       self.nixosModules.thinkpadx13Hardware
       self.nixosModules.paquetesDoomEmacs
-      #self.nixosModules.niri
+      self.nixosModules.niri
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
