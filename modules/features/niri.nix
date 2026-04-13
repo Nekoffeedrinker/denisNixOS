@@ -139,15 +139,15 @@
           "Mod+Return".spawn-sh = lib.getExe pkgs.kitty;
           "Mod+D".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
 
-          "Super+Alt+L" = {
-            hotkey-overlay-title = "Lock the Screen: swaylock";
-            spawn = "swaylock";
-          };
-          "Super+Alt+S" = {
-            allow-when-locked = true;
-            hotkey-overlay-title = null;
-            spawn-sh = "pkill orca || exec orca";
-          };
+          # "Super+Alt+L" = {
+          #   hotkey-overlay-title = "Lock the Screen: swaylock";
+          #   spawn = "swaylock";
+          # };
+          # "Super+Alt+S" = {
+          #   allow-when-locked = true;
+          #   hotkey-overlay-title = null;
+          #   spawn-sh = "pkill orca || exec orca";
+          # };
 
           # "XF86AudioRaiseVolume" = {
           #   allow-when-locked = true;
@@ -193,11 +193,11 @@
           # };
 
           "Mod+O" = {
-            repeat = false;
+            # repeat = false;
             toggle-overview = _: {};
           };
           "Mod+Q" = {
-            repeat = false;
+            # repeat = false;
             close-window = _: {};
           };
 
@@ -256,22 +256,22 @@
           "Mod+Shift+U".move-workspace-down = _: {};
           "Mod+Shift+I".move-workspace-up = _: {};
 
-          "Mod+WheelScrollDown" = {
-            cooldown-ms = 150;
-            focus-workspace-down = _: {};
-          };
-          "Mod+WheelScrollUp" = {
-            cooldown-ms = 150;
-            focus-workspace-up = _: {};
-          };
-          "Mod+Ctrl+WheelScrollDown" = {
-            cooldown-ms = 150;
-            move-column-to-workspace-down = _: {};
-          };
-          "Mod+Ctrl+WheelScrollUp" = {
-            cooldown-ms = 150;
-            move-column-to-workspace-up = _: {};
-          };
+          # "Mod+WheelScrollDown" = {
+          #   cooldown-ms = 150;
+          #   focus-workspace-down = _: {};
+          # };
+          # "Mod+WheelScrollUp" = {
+          #   cooldown-ms = 150;
+          #   focus-workspace-up = _: {};
+          # };
+          # "Mod+Ctrl+WheelScrollDown" = {
+          #   cooldown-ms = 150;
+          #   move-column-to-workspace-down = _: {};
+          # };
+          # "Mod+Ctrl+WheelScrollUp" = {
+          #   cooldown-ms = 150;
+          #   move-column-to-workspace-up = _: {};
+          # };
 
           "Mod+WheelScrollRight".focus-column-right = _: {};
           "Mod+WheelScrollLeft".focus-column-left = _: {};
@@ -330,10 +330,10 @@
           "Ctrl+Print".screenshot-screen = _: {};
           "Alt+Print".screenshot-window = _: {};
 
-          "Mod+Escape" = {
-            allow-inhibiting = false;
-            toggle-keyboard-shortcuts-inhibit = _: {};
-          };
+          # "Mod+Escape" = {
+          #   allow-inhibiting = false;
+          #   toggle-keyboard-shortcuts-inhibit = _: {};
+          # };
           "Mod+Shift+E".quit = _: {};
           "Ctrl+Alt+Delete".quit = _: {};
           "Mod+Shift+P".power-off-monitors = _: {};
