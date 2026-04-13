@@ -1,9 +1,4 @@
 {inputs, ...}: {
-  flake.inputs.noctalia = {
-    url = "github:noctalia-dev/noctalia-shell";
-    inputs.nixpkgs.follows = "nixpkgs";
-  };
-
   flake.nixosModules.denisNiri = {pkgs, ...}: {
     programs.niri.enable = true;
     environment.systemPackages = [
