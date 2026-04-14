@@ -131,6 +131,7 @@
       arduino-cli
       btop # monitor de recursos
       fastfetch
+      fzf # para usar fzf-tab en zsh
       git
       kitty
       lf # explorador de archivos en terminal
@@ -143,6 +144,7 @@
       typst
       usbutils
       wget
+      zoxide # para usarlo en zsh
       zsh
 
       # Gui
