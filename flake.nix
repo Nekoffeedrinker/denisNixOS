@@ -6,11 +6,6 @@
     import-tree.url = "github:vic/import-tree";
 
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
-
-    dms = {
-      url = "github:AvengeMedia/DankMaterialShell/stable";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);

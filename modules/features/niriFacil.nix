@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{
   flake.nixosModules.denisNiri = {pkgs, ...}: {
     # Instalar Niri
     programs.niri.enable = true;
@@ -18,7 +18,6 @@
 
     programs.dms-shell = {
       enable = true;
-      package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
       systemd = {
         enable = true; # Systemd service for auto-start
