@@ -8,8 +8,8 @@
     imports = [
       self.nixosModules.thinkpadx13Hardware
       self.nixosModules.paquetesDoomEmacs
-      # self.nixosModules.niri
       self.nixosModules.denisNiri
+      self.nixosModules.denisDMS
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
