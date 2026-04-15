@@ -137,6 +137,7 @@
       sl # steam locomotive
       stow
       syncthing
+      tailscale
       tree # arbol de directorios
       typst
       usbutils
