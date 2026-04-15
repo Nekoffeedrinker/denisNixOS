@@ -138,7 +138,6 @@
       sl # steam locomotive
       stow
       syncthing
-      tailscale
       tree # arbol de directorios
       typst
       usbutils
@@ -183,6 +182,9 @@
     # Habilitar Zsh
     programs.zsh.enable = true;
     users.defaultUserShell = pkgs.zsh;
+
+    # Habilitar Tailscale
+    services.tailscale.enable = true;
 
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
