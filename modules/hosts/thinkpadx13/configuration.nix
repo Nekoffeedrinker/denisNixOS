@@ -124,16 +124,17 @@
     # List packages installed in system profile. To search, run:
     # $ nix search wget
     environment.systemPackages = with pkgs; [
+      #
       # Terminal (cli)
       arduino-cli
       btop # monitor de recursos
       fastfetch
-      fzf # para usar fzf-tab en zsh
-      git
+      fd # find mejorado
       kitty
       lf # explorador de archivos en terminal
       neovim
       ncdu # analizar el espacio en disco
+      ripgrep # grep mejorado (se usa `rg`)
       sl # steam locomotive
       stow
       syncthing
@@ -142,8 +143,17 @@
       typst
       usbutils
       wget
-      zoxide # para usarlo en zsh
+
+      # Git
+      git
+      delta # pager de git mejorado
+
+      # Zsh: dependencias y alias
       zsh
+      zoxide # para usarlo en zsh
+      fzf # para usar fzf-tab en zsh
+      bat # cat mejorado
+      eza # ls mejorado
 
       # Gui
       blanket # reproducir sonidos ambientales
