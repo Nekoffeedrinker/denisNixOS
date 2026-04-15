@@ -22,11 +22,27 @@
 
       # Core features
       enableSystemMonitoring = true; # System monitoring widgets (dgop)
-      enableVPN = true; # VPN management widget
-      enableDynamicTheming = true; # Wallpaper-based theming (matugen)
+      enableVPN = false; # VPN management widget
+      enableDynamicTheming = false; # Wallpaper-based theming (matugen)
       enableAudioWavelength = true; # Audio visualizer (cava)
       enableCalendarEvents = true; # Calendar integration (khal)
       enableClipboardPaste = true; # Pasting from the clipboard history (wtype)
+    };
+
+    # Activar el polkit
+    security.polkit.enable = true;
+    systemd.user.services.polkit-gnome-authentication-agent-1 = {
+      description = "polkit-gnome-authentication-agent-1";
+      wantedBy = ["graphical-session.target"];
+      wants = ["graphical-session.target"];
+      after = ["graphical-session.target"];
+      serviceConfig = {
+        Type = "simple";
+        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+        Restart = "on-failure";
+        RestartSec = 1;
+        TimeoutStopSec = 10;
+      };
     };
   };
 }

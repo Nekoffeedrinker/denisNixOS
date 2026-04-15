@@ -116,9 +116,6 @@
       Defaults pwfeedback
     '';
 
-    # Activar el polkit
-    security.polkit.enable = true;
-
     # ==================== Paquetes / Programas ====================
 
     # Allow unfree packages
