@@ -80,7 +80,7 @@
     # Internet
     networking.networkmanager.enable = true;
     networking.wireless.enable = true;
-    networking.hostName = "nixos";
+    networking.hostName = "thinkpadx13";
 
     # Bluetooth
     hardware.bluetooth.enable = true;
@@ -171,6 +171,7 @@
       # Relacionado a Nix
       alejandra # code formatter
       nixd # lsp
+      nh # nix helper
     ];
 
     # Configuración de nixd
@@ -217,6 +218,7 @@
 
     environment.sessionVariables = {
       PATH = ["$HOME/.emacs.d/bin"];
+      FLAKE = "/home/denis/denisNixOS/";
     };
 
     # ==================== Servicios ====================
