@@ -1,5 +1,7 @@
 {inputs, ...}: {
   flake.nixosModules.denisDMS = {pkgs, ...}: {
+    imports = [inputs.dms-plugin-registry.modules.default];
+
     programs.dms-shell = {
       enable = true;
       package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default;
@@ -22,7 +24,7 @@
         developerUtilities.enable = true;
         tailscale.enable = true;
         nixMonitor.enable = true;
-        #airQuality.enable = true;
+        airQuality.enable = true;
 
         # = launcher =
         calculator.enable = true;
