@@ -159,10 +159,12 @@
       eyedropper
       gparted
       inkscape
+      kdePackages.okular
       localsend
       lunacy
       meld
       obsidian
+      rustdesk-flutter
       spotify
       tangram # contenedor para webapps
       vscode
