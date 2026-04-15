@@ -22,7 +22,7 @@
         developerUtilities.enable = true;
         tailscale.enable = true;
         nixMonitor.enable = true;
-        airQuality.enable = true;
+        #airQuality.enable = true;
 
         # = launcher =
         calculator.enable = true;
