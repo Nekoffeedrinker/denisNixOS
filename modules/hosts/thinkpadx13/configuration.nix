@@ -9,7 +9,8 @@
       self.nixosModules.thinkpadx13Hardware
       self.nixosModules.paquetesDoomEmacs
       self.nixosModules.denisNiri
-      self.nixosModules.denisDMS
+      # self.nixosModules.denisDMS
+      self.nixosModules.denisNoctalia
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
