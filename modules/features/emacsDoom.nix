@@ -4,7 +4,8 @@
       emacs
 
       # Requeridos
-      ripgrep # regex pattern directory searcher
+      git
+      ripgrep # better `grep`
       fd # better `find`
       symbola # Fuente
       nerd-fonts.symbols-only
