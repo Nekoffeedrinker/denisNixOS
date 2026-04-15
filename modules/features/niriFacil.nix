@@ -18,7 +18,7 @@
 
     programs.dms-shell = {
       enable = true;
-      quickshell.package = pkgs.quickshell; # or your custom package
+      package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
       # Core features
       enableSystemMonitoring = true; # System monitoring widgets (dgop)
