@@ -12,5 +12,9 @@
       shellcheck
       pandoc
     ];
+    # Poder ejecutar los comandos doom
+    environment.sessionVariables = {
+      PATH = ["$HOME/.emacs.d/bin"];
+    };
   };
 }

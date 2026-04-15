@@ -217,8 +217,7 @@
     # ==================== Variables de entorno ====================
 
     environment.sessionVariables = {
-      PATH = ["$HOME/.emacs.d/bin"];
-      FLAKE = "/home/denis/denisNixOS/";
+      NH_FLAKE = "/home/denis/denisNixOS/";
     };
 
     # ==================== Servicios ====================
