@@ -143,6 +143,9 @@
       typst
       usbutils
       wget
+      (yazi.override {
+        _7zz = _7zz-rar;
+      })
 
       # Git
       git
