@@ -8,6 +8,8 @@
       cliphist
       wl-clipboard
     ];
+    # Que funcione la huella
+    security.pam.services.login.fprintAuth = true;
 
     programs.kdeconnect.enable = true;
   };
