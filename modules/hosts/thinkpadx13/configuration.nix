@@ -18,6 +18,7 @@
       self.nixosModules.polkitGnome
       # Aplicaciones
       self.nixosModules.paquetesDoomEmacs
+      self.nixosModules.virtManager
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
