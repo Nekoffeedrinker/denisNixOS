@@ -15,5 +15,7 @@
     environment.variables.NOCTALIA_PAM_SERVICE = "noctalia";
 
     programs.kdeconnect.enable = true;
+
+    users.users.mainUser.extraGroups = ["input"]; # para Slow Bongo
   };
 }

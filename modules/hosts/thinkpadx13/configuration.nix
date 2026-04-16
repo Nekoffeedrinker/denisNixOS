@@ -4,7 +4,10 @@
   ...
 }: {
   flake.nixosModules.thinkpadx13Configuration = {pkgs, ...}: {
-    # import any other modules from here
+    # Valores reutilizables entre módulos
+    specialArgs = {mainUser = "denis";};
+
+    # Importar otros módulos
     imports = [
       self.nixosModules.thinkpadx13Hardware
       self.nixosModules.paquetesDoomEmacs
@@ -101,10 +104,10 @@
     # ==================== Usuarios ====================
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
-    users.users.denis = {
+    users.users.mainUser = { # mainUser = 'denis'
       isNormalUser = true;
       description = "Denis Pilar";
-      extraGroups = ["networkmanager" "wheel" "input"];
+      extraGroups = ["networkmanager" "wheel"];
       # packages = with pkgs; [
       #   #  añadir paquetes solo para el usuario
       # ];
