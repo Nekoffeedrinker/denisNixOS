@@ -8,9 +8,8 @@
     mainUser,
     ...
   }: {
-    imports = [self.nixosModules.polkitGnome];
-
     # Que funcione la huella
+    imports = [self.nixosModules.polkitGnome];
     security.pam.services.noctalia = {
       fprintAuth = true;
       unixAuth = true;

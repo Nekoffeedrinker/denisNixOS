@@ -11,11 +11,13 @@
     # Importar otros módulos
     imports = [
       self.nixosModules.thinkpadx13Hardware
-      self.nixosModules.paquetesDoomEmacs
+      # Entorno de escritorio
       self.nixosModules.denisNiri
-      self.nixosModules.polkitGnome
-      # self.nixosModules.denisDMS
       self.nixosModules.denisNoctalia
+      # self.nixosModules.denisDMS
+      self.nixosModules.polkitGnome
+      # Aplicaciones
+      self.nixosModules.paquetesDoomEmacs
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
