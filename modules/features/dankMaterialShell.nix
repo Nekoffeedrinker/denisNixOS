@@ -1,6 +1,13 @@
-{inputs, ...}: {
+{
+  self,
+  inputs,
+  ...
+}: {
   flake.nixosModules.denisDMS = {pkgs, ...}: {
-    imports = [inputs.dms-plugin-registry.modules.default];
+    imports = [
+      inputs.dms-plugin-registry.modules.default
+      self.nixosModules.polkitGnome
+    ];
 
     programs.dms-shell = {
       enable = true;

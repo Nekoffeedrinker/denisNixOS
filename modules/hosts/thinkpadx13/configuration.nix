@@ -12,6 +12,7 @@
       self.nixosModules.thinkpadx13Hardware
       self.nixosModules.paquetesDoomEmacs
       self.nixosModules.denisNiri
+      self.nixosModules.polkitGnome
       # self.nixosModules.denisDMS
       self.nixosModules.denisNoctalia
     ];
