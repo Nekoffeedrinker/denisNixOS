@@ -179,6 +179,7 @@
       tangram # contenedor para webapps
       vscode
       zapzap
+      zotero
 
       # Relacionado a Nix
       alejandra # code formatter
