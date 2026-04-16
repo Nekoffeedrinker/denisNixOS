@@ -168,6 +168,7 @@
       lunacy
       meld
       obsidian
+      onlyoffice-desktopeditors
       rustdesk-flutter
       spotify
       tangram # contenedor para webapps
