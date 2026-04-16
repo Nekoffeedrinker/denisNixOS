@@ -104,7 +104,7 @@
     users.users.denis = {
       isNormalUser = true;
       description = "Denis Pilar";
-      extraGroups = ["networkmanager" "wheel"];
+      extraGroups = ["networkmanager" "wheel" "input"];
       # packages = with pkgs; [
       #   #  añadir paquetes solo para el usuario
       # ];
@@ -195,7 +195,7 @@
     services.tailscale.enable = true;
 
     # Some programs need SUID wrappers, can be configured further or are
-    # started in user sessions.
+    # started in sudo usermod -a -G input $USERuser sessions.
     # programs.mtr.enable = true;
     # programs.gnupg.agent = {
     #   enable = true;
