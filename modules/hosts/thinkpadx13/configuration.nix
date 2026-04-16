@@ -4,9 +4,6 @@
   ...
 }: {
   flake.nixosModules.thinkpadx13Configuration = {pkgs, ...}: {
-    # Valores reutilizables entre módulos
-    specialArgs = {mainUser = "denis";};
-
     # Importar otros módulos
     imports = [
       self.nixosModules.thinkpadx13Hardware
