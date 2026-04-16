@@ -110,6 +110,7 @@
       isNormalUser = true;
       description = "Denis Pilar";
       extraGroups = ["networkmanager" "wheel"];
+      initialPassword = "1234"; # solo para testing
       # packages = with pkgs; [
       #   #  añadir paquetes solo para el usuario
       # ];
