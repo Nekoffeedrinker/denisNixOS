@@ -5,8 +5,11 @@
       quickshell
 
       # Para Clipper
-      cliphist
-      wl-clipboard
+      # cliphist
+      # wl-clipboard
+
+      # para launcher clipboard
+      wtype
     ];
     # Que funcione la huella
     security.pam.services.noctalia = {
