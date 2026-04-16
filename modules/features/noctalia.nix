@@ -4,12 +4,8 @@
       inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
       quickshell
 
-      # Para Clipper
-      # cliphist
-      # wl-clipboard
-
-      # para launcher clipboard
-      wtype
+      wtype # para launcher clipboard
+      evtest # para Slow Bongo
     ];
     # Que funcione la huella
     security.pam.services.noctalia = {
