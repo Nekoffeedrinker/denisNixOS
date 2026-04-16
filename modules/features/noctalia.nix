@@ -9,7 +9,11 @@
       wl-clipboard
     ];
     # Que funcione la huella
-    security.pam.services.login.fprintAuth = true;
+    security.pam.services.noctalia = {
+      fprintAuth = true;
+      unixAuth = true;
+    };
+    environment.variables.NOCTALIA_PAM_SERVICE = "noctalia";
 
     programs.kdeconnect.enable = true;
   };
