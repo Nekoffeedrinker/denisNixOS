@@ -138,7 +138,6 @@
       fastfetch
       fd # find mejorado
       kitty
-      lf # explorador de archivos en terminal
       neovim
       ncdu # analizar el espacio en disco
       ripgrep # grep mejorado (se usa `rg`)
