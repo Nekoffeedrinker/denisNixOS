@@ -169,6 +169,7 @@
       # Gui
       blanket # reproducir sonidos ambientales
       eyedropper
+      font-manager
       gparted
       inkscape
       kdePackages.okular
