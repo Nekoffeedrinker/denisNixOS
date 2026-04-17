@@ -219,6 +219,10 @@
       public-sans
       libertinus
       courier-prime
+      roboto
+      roboto-serif
+      roboto-slab
+      corefonts
     ];
 
     # ==================== Entorno de escritorio ====================
