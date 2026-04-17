@@ -21,20 +21,21 @@
       quickshell
 
       wtype # para launcher clipboard
-      evtest # para Slow Bongo
+      evtest # para Slow Bongo (plugin)
     ];
     programs.kdeconnect.enable = true;
 
-    # para Slow Bongo (plugin)
-    users.users.${mainUser}.extraGroups = ["input"];
-
     # Para Battery Threshold (plugin)
     users.groups.battery_ctl = {};
-    users.users.${mainUser}.extraGroups = ["battery_ctl"];
     services.udev.extraRules = ''
       SUBSYSTEM=="power_supply", KERNEL=="BAT*", \
           RUN+="/bin/chgrp battery_ctl /sys$devpath/charge_control_end_threshold", \
           RUN+="/bin/chmod g+w /sys$devpath/charge_control_end_threshold"
     '';
+
+    users.users.${mainUser}.extraGroups = [
+      "battery_ctl" # battery threshold
+      "input" # slow bongo
+    ];
   };
 }
