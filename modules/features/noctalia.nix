@@ -32,6 +32,7 @@
           RUN+="chgrp battery_ctl /sys$devpath/charge_control_end_threshold", \
           RUN+="chmod g+w /sys$devpath/charge_control_end_threshold"
     '';
+    services.udev.path = [pkgs.coreutils];
 
     users.users.${mainUser}.extraGroups = [
       "battery_ctl" # battery threshold
