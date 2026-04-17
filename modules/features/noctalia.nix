@@ -29,8 +29,8 @@
     users.groups.battery_ctl = {};
     services.udev.extraRules = ''
       SUBSYSTEM=="power_supply", KERNEL=="BAT*", \
-          RUN+="/run/current-system/sw/bin/chgrp battery_ctl /sys$devpath/charge_control_end_threshold", \
-          RUN+="/run/current-system/sw/bin/chmod g+w /sys$devpath/charge_control_end_threshold"
+          RUN+="chgrp battery_ctl /sys$devpath/charge_control_end_threshold", \
+          RUN+="chmod g+w /sys$devpath/charge_control_end_threshold"
     '';
 
     users.users.${mainUser}.extraGroups = [
