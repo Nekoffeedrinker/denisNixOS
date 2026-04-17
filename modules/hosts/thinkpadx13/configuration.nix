@@ -14,6 +14,7 @@
       # = Entorno de escritorio =
       self.nixosModules.denisNiri
       self.nixosModules.denisNoctalia
+      self.nixosModules.denisNoctaliaBTh
       # self.nixosModules.denisDMS
       # = Aplicaciones =
       self.nixosModules.paquetesDoomEmacs

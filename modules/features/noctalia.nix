@@ -25,18 +25,7 @@
     ];
     programs.kdeconnect.enable = true;
 
-    # Para Battery Threshold (plugin)
-    users.groups.battery_ctl = {};
-    services.udev.extraRules = ''
-      SUBSYSTEM=="power_supply", KERNEL=="BAT*", \
-          RUN+="${pkgs.coreutils}/bin/chgrp battery_ctl /sys$devpath/charge_control_end_threshold", \
-          RUN+="${pkgs.coreutils}/bin/chmod g+w /sys$devpath/charge_control_end_threshold"
-    '';
-    services.udev.path = [pkgs.coreutils];
-
-    users.users.${mainUser}.extraGroups = [
-      "battery_ctl" # battery threshold
-      "input" # slow bongo
-    ];
+    # para Slow Bongo
+    users.users.${mainUser}.extraGroups = ["input"];
   };
 }
