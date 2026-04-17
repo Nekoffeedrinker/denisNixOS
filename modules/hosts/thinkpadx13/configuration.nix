@@ -11,12 +11,11 @@
     # Importar otros módulos
     imports = [
       self.nixosModules.thinkpadx13Hardware
-      # Entorno de escritorio
+      # = Entorno de escritorio =
       self.nixosModules.denisNiri
       self.nixosModules.denisNoctalia
       # self.nixosModules.denisDMS
-      self.nixosModules.polkitGnome
-      # Aplicaciones
+      # = Aplicaciones =
       self.nixosModules.paquetesDoomEmacs
       self.nixosModules.virtManager
     ];
