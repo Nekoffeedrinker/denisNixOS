@@ -27,11 +27,11 @@
 
     # Para Battery Threshold (plugin)
     users.groups.battery_ctl = {};
-    services.udev.extraRules = ''
-      SUBSYSTEM=="power_supply", KERNEL=="BAT*", \
-          RUN+="/bin/chgrp battery_ctl /sys$devpath/charge_control_end_threshold", \
-          RUN+="/bin/chmod g+w /sys$devpath/charge_control_end_threshold"
-    '';
+    # services.udev.extraRules = ''
+    #   SUBSYSTEM=="power_supply", KERNEL=="BAT*", \
+    #       RUN+="/bin/chgrp battery_ctl /sys$devpath/charge_control_end_threshold", \
+    #       RUN+="/bin/chmod g+w /sys$devpath/charge_control_end_threshold"
+    # '';
 
     users.users.${mainUser}.extraGroups = [
       "battery_ctl" # battery threshold
