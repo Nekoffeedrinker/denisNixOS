@@ -16,6 +16,8 @@
       gnumake
       # autoformater
       shfmt
+      # visor PDF
+      emacsPackages.pdf-tools
     ];
     # Poder ejecutar los comandos doom
     environment.sessionVariables = {
