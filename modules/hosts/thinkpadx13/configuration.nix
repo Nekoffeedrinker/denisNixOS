@@ -215,7 +215,7 @@
     # Tipografías
     fonts.packages = with pkgs; [
       nerd-fonts.jetbrains-mono
-      nerd-fonts.monaspace
+      monaspace
       inter
       public-sans
       libertinus
