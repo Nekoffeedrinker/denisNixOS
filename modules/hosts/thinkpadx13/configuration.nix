@@ -139,6 +139,7 @@
       arduino-cli
       btop # monitor de recursos
       fastfetch
+      hyfetch # pride fetch
       fd # find mejorado
       kitty
       neovim
