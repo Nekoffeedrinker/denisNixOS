@@ -20,6 +20,8 @@
       emacsPackages.pdf-tools
       # Typst
       typst
+      # Compilar tree-sitter
+      gcc
     ];
     # Poder ejecutar los comandos doom
     environment.sessionVariables = {
