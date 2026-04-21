@@ -18,6 +18,9 @@
       shfmt
       # visor PDF
       emacsPackages.pdf-tools
+      # Typst
+      typst
+      tinymist
     ];
     # Poder ejecutar los comandos doom
     environment.sessionVariables = {
