@@ -11,15 +11,24 @@
       nerd-fonts.symbols-only
       shellcheck
       pandoc
+
+      # autoformater
+      shfmt
+
+      # dirvish
+      vips # vistra previa de imágenes
+      poppler-utils # vista previa de PDF
+
       # vterm
       cmake
       gnumake
-      # autoformater
-      shfmt
+
       # visor PDF
       emacsPackages.pdf-tools
+
       # Compilar tree-sitter
       gcc
+
       # Typst
       typst
       tinymist # LSP
