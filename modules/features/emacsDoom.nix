@@ -18,10 +18,11 @@
       shfmt
       # visor PDF
       emacsPackages.pdf-tools
-      # Typst
-      typst
       # Compilar tree-sitter
       gcc
+      # Typst
+      typst
+      tinymist # LSP
     ];
     # Poder ejecutar los comandos doom
     environment.sessionVariables = {
