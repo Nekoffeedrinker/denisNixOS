@@ -31,14 +31,6 @@
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
-    # Añadir fedora al bootloader
-    boot.loader.systemd-boot.extraEntries = {
-      "fedora.conf" = ''
-        title Fedora Linux
-        efi /EFI/fedora/grubx64.efi
-      '';
-    };
-
     # Teclado (en X11)
     services.xserver.xkb = {
       layout = "us";
