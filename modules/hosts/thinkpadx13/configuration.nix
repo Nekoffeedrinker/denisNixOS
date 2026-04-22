@@ -171,6 +171,7 @@
       blanket # reproducir sonidos ambientales
       eyedropper
       font-manager
+      flameshot # capturas de pantalla
       gparted
       inkscape
       kdePackages.okular
