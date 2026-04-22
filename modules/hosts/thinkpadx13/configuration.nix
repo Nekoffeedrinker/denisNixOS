@@ -78,11 +78,11 @@
     # ==================== Puntos de montaje ====================
 
     # Punto de montaje de mi carpeta Gatos
-    fileSystems."/mnt/GATOS" = {
-      device = "/dev/disk/by-uuid/10d308dd-afc2-4647-99c7-6165285d6e7b";
-      fsType = "ext4";
-      options = ["defaults"];
-    };
+    # fileSystems."/mnt/GATOS" = {
+    #   device = "/dev/disk/by-uuid/10d308dd-afc2-4647-99c7-6165285d6e7b";
+    #   fsType = "ext4";
+    #   options = ["defaults"];
+    # };
 
     # ==================== Internet / Bluetooth ====================
 
@@ -246,15 +246,14 @@
     # ==================== Servicios ====================
 
     # Iniciar Syncthing
-    services = {
-      syncthing = {
-        enable = true;
-        user = "denis";
-        group = "users";
-        dataDir = "/mnt/GATOS/Syncthing"; # Default folder for new synced folders
-        configDir = "/mnt/GATOS/.config/syncthing"; # Folder for Syncthing's settings and keys
-        extraFlags = ["--allow-newer-config"];
-      };
+    services.syncthing = {
+      enable = true;
+      openDefaultPorts = true;
+      user = "denis";
+      group = "users";
+      dataDir = "/home/denis/Syncthing"; # Default folder for new synced folders
+      configDir = "/home/denis/.local/state/syncthing"; # Folder for Syncthing's settings and keys
+      extraFlags = ["--allow-newer-config"];
     };
 
     # Enable the OpenSSH daemon.
