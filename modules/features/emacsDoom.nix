@@ -22,6 +22,7 @@
       # vterm
       cmake
       gnumake
+      libtool
 
       # visor PDF
       emacsPackages.pdf-tools
