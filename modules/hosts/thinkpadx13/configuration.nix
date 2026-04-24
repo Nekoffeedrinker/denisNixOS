@@ -175,7 +175,7 @@
       meld
       obsidian
       onlyoffice-desktopeditors
-      rustdesk-flutter
+      parsec-bin
       spotify
       tangram # contenedor para webapps
       vscode
