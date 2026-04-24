@@ -67,6 +67,9 @@
       #media-session.enable = true;
     };
 
+    # Arreglar el reloj al arrancar en windows
+    time.hardwareClockInLocalTime = true;
+
     # ==================== Puntos de montaje ====================
 
     # Punto de montaje de mi carpeta Gatos
