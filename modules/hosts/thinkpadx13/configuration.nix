@@ -170,6 +170,7 @@
       gparted
       inkscape
       kdePackages.okular
+      kdePackages.kdenlive
       localsend
       lunacy
       meld
