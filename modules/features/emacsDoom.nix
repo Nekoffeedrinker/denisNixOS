@@ -24,9 +24,6 @@
       gnumake
       libtool
 
-      # visor PDF
-      emacsPackages.pdf-tools
-
       # Compilar tree-sitter
       gcc
 
