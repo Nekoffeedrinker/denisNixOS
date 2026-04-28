@@ -224,6 +224,15 @@
       roboto-serif
       roboto-slab
       corefonts
+
+      # Multiidioma y compatibilidad
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-cjk-serif
+      noto-fonts-cjk-sans-static
+      noto-fonts-cjk-serif-static
+      noto-fonts-color-emoji
+      noto-fonts-monochrome-emoji
     ];
 
     # ==================== Entorno de escritorio ====================
