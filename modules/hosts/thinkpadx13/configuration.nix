@@ -18,6 +18,7 @@
       # self.nixosModules.denisDMS
       # === Aplicaciones ===
       self.nixosModules.doomEmacs
+      self.nixosModules.steam
       self.nixosModules.virtManager
     ];
 
