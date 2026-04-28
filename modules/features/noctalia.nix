@@ -3,7 +3,7 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.denisNoctalia = {
+  flake.nixosModules.noctalia = {
     pkgs,
     mainUser,
     ...

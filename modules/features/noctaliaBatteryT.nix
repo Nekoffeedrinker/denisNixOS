@@ -1,5 +1,5 @@
 {...}: {
-  flake.nixosModules.denisNoctaliaBTh = {
+  flake.nixosModules.noctaliaBatThresh = {
     pkgs,
     mainUser,
     ...

@@ -1,5 +1,5 @@
 {...}: {
-  flake.nixosModules.denisNiri = {pkgs, ...}: {
+  flake.nixosModules.niri = {pkgs, ...}: {
     # Instalar Niri
     programs.niri.enable = true;
 
