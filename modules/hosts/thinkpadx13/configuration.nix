@@ -68,9 +68,6 @@
       #media-session.enable = true;
     };
 
-    # Arreglar el reloj al arrancar en windows
-    time.hardwareClockInLocalTime = true;
-
     # ==================== Puntos de montaje ====================
 
     # Punto de montaje de mi carpeta Gatos
@@ -96,10 +93,10 @@
 
     # ==================== Localización ====================
 
-    # Set your time zone.
+    # Zona horaria
     time.timeZone = "America/Mazatlan";
 
-    # Select internationalisation properties.
+    # Lenguaje del sistema y formato de fechay hora
     i18n.defaultLocale = "es_MX.UTF-8";
 
     # ==================== Usuarios ====================
