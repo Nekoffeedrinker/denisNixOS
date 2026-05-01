@@ -166,6 +166,7 @@
       eyedropper
       font-manager
       flameshot # capturas de pantalla
+      gearlever # administrador de AppImages
       gparted
       inkscape
       kdePackages.okular
@@ -196,6 +197,12 @@
 
     # Configuración de nixd
     nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+
+    # Soporte para AppImages
+    programs.appimage = {
+      enable = true;
+      binfmt = true;
+    };
 
     # Install firefox.
     programs.firefox.enable = true;
