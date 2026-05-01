@@ -11,6 +11,7 @@
     # Importar otros módulos
     imports = [
       self.nixosModules.thinkpadx13Hardware
+      self.nixosModules.flatpak
       # === Entorno de escritorio ===
       self.nixosModules.niri
       self.nixosModules.noctalia

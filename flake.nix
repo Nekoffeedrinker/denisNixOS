@@ -7,6 +7,8 @@
 
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
 
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
     dms = {
       url = "github:AvengeMedia/DankMaterialShell/stable";
       inputs.nixpkgs.follows = "nixpkgs";
