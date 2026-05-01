@@ -181,6 +181,11 @@
       zapzap
       zotero
 
+      # Producción y teatro
+      crosspipe
+      obs-studio
+      qlcplus
+
       # Relacionado a Nix
       alejandra # code formatter
       nixd # lsp
