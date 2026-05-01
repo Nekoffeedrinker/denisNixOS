@@ -175,7 +175,6 @@
       meld
       obsidian
       onlyoffice-desktopeditors
-      parsec-bin
       spotify
       tangram # contenedor para webapps
       vscode

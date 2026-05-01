@@ -21,6 +21,7 @@
           origin = "flathub";
         }) [
           "com.github.tchx84.Flatseal"
+          "com.parsecgaming.parsec"
         ];
     };
   };
