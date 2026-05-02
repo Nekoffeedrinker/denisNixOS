@@ -164,24 +164,27 @@
       # Gui
       blanket # reproducir sonidos ambientales
       eyedropper
-      font-manager
       flameshot # capturas de pantalla
       gearlever # administrador de AppImages
       gparted
-      inkscape
       kdePackages.okular
       kdePackages.kdenlive
       localsend
-      lunacy
       meld
       obsidian
       onlyoffice-desktopeditors
       spotify
-      scribus
       tangram # contenedor para webapps
       vscode
       zapzap
       zotero
+
+      # Productión de imagen
+      font-manager
+      gimp
+      inkscape
+      lunacy
+      scribus
 
       # Producción y teatro
       crosspipe
