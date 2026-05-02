@@ -177,6 +177,7 @@
       obsidian
       onlyoffice-desktopeditors
       spotify
+      scribus
       tangram # contenedor para webapps
       vscode
       zapzap
