@@ -138,6 +138,7 @@
       kitty
       neovim
       ncdu # analizar el espacio en disco
+      nvtopPackages.intel # monitor de la gráfica
       ripgrep # grep mejorado (se usa `rg`)
       sl # steam locomotive
       stow
@@ -168,7 +169,6 @@
       gearlever # administrador de AppImages
       gparted
       kdePackages.okular
-      kdePackages.kdenlive
       localsend
       meld
       obsidian
@@ -186,9 +186,12 @@
       lunacy
       scribus
 
+      # Productión de video
+      kdePackages.kdenlive
+      obs-studio
+
       # Producción y teatro
       crosspipe
-      obs-studio
       qlcplus
 
       # Relacionado a Nix
