@@ -69,6 +69,9 @@
       #media-session.enable = true;
     };
 
+    # Comunicarse con reproductores de medio (atajos para pausar y reproducir)
+    services.playerctld.enable = true;
+
     # ==================== Puntos de montaje ====================
 
     # Punto de montaje de mi carpeta Gatos
