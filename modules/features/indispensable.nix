@@ -1,5 +1,11 @@
-{inputs, ...}: {
+{self, ...}: {
   flake.nixosModules.basicos = {pkgs, ...}: {
+    # =============== Importar ===============
+    imports = [
+      self.nixosModules.nixUtil
+      self.nixosModules.zsh
+    ];
+
     # =============== Servicios ===============
 
     # Imprimir documentos usando CUPS
@@ -52,6 +58,9 @@
       # herramientas
       btop # monitor de recursos
       tree # arbol de directorios
+      fzf # búsqueda chida
+      bat # cat mejorado
+      eza # ls mejorado
       fd # find mejorado
       ripgrep # grep mejorado (se usa `rg`)
       usbutils # trabajar con USB
@@ -64,35 +73,14 @@
       git
       delta # pager de git mejorado
 
-      # Zsh: dependencias y alias
-      zsh
-      zoxide # para usarlo en zsh
-      fzf # para usar fzf-tab en zsh
-      bat # cat mejorado
-      eza # ls mejorado
-
       # Gui
       font-manager
       gparted
       localsend
-
-      # Relacionado a Nix
-      alejandra # code formatter
-      nixd # lsp
-      nh # nix helper
-      nix-output-monitor # nix-binary bonito
-      nvd # diferencias entre generaciones
     ];
-
-    # Configuración de nixd
-    nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
     # Instalar firefox.
     programs.firefox.enable = true;
-
-    # Habilitar Zsh
-    programs.zsh.enable = true;
-    users.defaultUserShell = pkgs.zsh;
 
     # Tipografías
     fonts.packages = with pkgs; [
