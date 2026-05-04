@@ -12,6 +12,11 @@
       shellcheck
       pandoc
 
+      # ispell
+      hunspell
+      hunspellDicts.es-mx
+      hunspellDicts.en-us
+
       # autoformater
       shfmt
 
