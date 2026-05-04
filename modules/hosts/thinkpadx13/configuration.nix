@@ -1,8 +1,4 @@
-{
-  self,
-  inputs,
-  ...
-}: {
+{self, ...}: {
   flake.nixosModules.thinkpadx13Configuration = {
     pkgs,
     mainUser,
@@ -11,6 +7,7 @@
     # Importar otros módulos
     imports = [
       self.nixosModules.thinkpadx13Hardware
+      self.nixosModules.basicos
       self.nixosModules.flatpak
       # === Entorno de escritorio ===
       self.nixosModules.niri
@@ -46,31 +43,9 @@
     # Habilitar lector de huellas
     services.fprintd.enable = true;
 
-    # Enable CUPS to print documents.
-    services.printing.enable = true;
-
     # Perfil de energía y batería
     services.power-profiles-daemon.enable = true;
     services.upower.enable = true;
-
-    # Enable sound with pipewire.
-    services.pulseaudio.enable = false;
-    security.rtkit.enable = true;
-    services.pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-      # If you want to use JACK applications, uncomment this
-      #jack.enable = true;
-
-      # use the example session manager (no others are packaged yet so this is enabled by default,
-      # no need to redefine it in your config for now)
-      #media-session.enable = true;
-    };
-
-    # Comunicarse con reproductores de medio (atajos para pausar y reproducir)
-    services.playerctld.enable = true;
 
     # ==================== Puntos de montaje ====================
 
@@ -95,14 +70,6 @@
     # networking.proxy.default = "http://user:password@proxy:port/";
     # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-    # ==================== Localización ====================
-
-    # Zona horaria
-    time.timeZone = "America/Mazatlan";
-
-    # Lenguaje del sistema y formato de fechay hora
-    i18n.defaultLocale = "es_MX.UTF-8";
-
     # ==================== Usuarios ====================
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -116,13 +83,6 @@
       # ];
     };
 
-    # ==================== Seguridad ====================
-
-    # Mostrar caracteres de contraseña en el sudo
-    security.sudo.extraConfig = ''
-      Defaults pwfeedback
-    '';
-
     # ==================== Paquetes / Programas ====================
 
     # Allow unfree packages
@@ -134,45 +94,17 @@
       #
       # Terminal (cli)
       arduino-cli
-      btop # monitor de recursos
-      fastfetch
-      hyfetch # pride fetch
-      fd # find mejorado
-      kitty
-      neovim
-      ncdu # analizar el espacio en disco
       nvtopPackages.intel # monitor de la gráfica
-      ripgrep # grep mejorado (se usa `rg`)
       sl # steam locomotive
-      stow
       syncthing
-      tree # arbol de directorios
       typst
-      usbutils
-      wget
-      (yazi.override {
-        _7zz = _7zz-rar;
-      })
-
-      # Git
-      git
-      delta # pager de git mejorado
-
-      # Zsh: dependencias y alias
-      zsh
-      zoxide # para usarlo en zsh
-      fzf # para usar fzf-tab en zsh
-      bat # cat mejorado
-      eza # ls mejorado
 
       # Gui
       blanket # reproducir sonidos ambientales
       eyedropper
       flameshot # capturas de pantalla
       gearlever # administrador de AppImages
-      gparted
       kdePackages.okular
-      localsend
       meld
       obsidian
       onlyoffice-desktopeditors
@@ -183,7 +115,6 @@
       zotero
 
       # Productión de imagen
-      font-manager
       gimp
       inkscape
       lunacy
@@ -196,30 +127,13 @@
       # Producción y teatro
       crosspipe
       qlcplus
-
-      # Relacionado a Nix
-      alejandra # code formatter
-      nixd # lsp
-      nh # nix helper
-      nix-output-monitor # nix-binary bonito
-      nvd # diferencias entre generaciones
     ];
-
-    # Configuración de nixd
-    nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
     # Soporte para AppImages
     programs.appimage = {
       enable = true;
       binfmt = true;
     };
-
-    # Install firefox.
-    programs.firefox.enable = true;
-
-    # Habilitar Zsh
-    programs.zsh.enable = true;
-    users.defaultUserShell = pkgs.zsh;
 
     # Habilitar Tailscale
     services.tailscale.enable = true;
@@ -232,29 +146,6 @@
     #   enableSSHSupport = true;
     # };
 
-    # Tipografías
-    fonts.packages = with pkgs; [
-      nerd-fonts.jetbrains-mono
-      monaspace
-      inter
-      public-sans
-      libertinus
-      courier-prime
-      roboto
-      roboto-serif
-      roboto-slab
-      corefonts
-
-      # Multiidioma y compatibilidad
-      noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-cjk-serif
-      noto-fonts-cjk-sans-static
-      noto-fonts-cjk-serif-static
-      noto-fonts-color-emoji
-      noto-fonts-monochrome-emoji
-    ];
-
     # ==================== Entorno de escritorio ====================
 
     # Enable the X11 windowing system.
@@ -266,6 +157,7 @@
 
     # ==================== Variables de entorno ====================
 
+    # Ubicación del flake (necesario para nh)
     environment.sessionVariables = {
       NH_FLAKE = "/home/denis/denisNixOS/";
     };
