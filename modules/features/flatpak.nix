@@ -5,9 +5,12 @@
     services.flatpak = {
       enable = true;
       uninstallUnmanaged = true;
-      update.auto = {
-        enable = true;
-        onCalendar = "weekly";
+      update = {
+        onActivation = true;
+        auto = {
+          enable = true;
+          onCalendar = "weekly";
+        };
       };
       remotes = [
         {
