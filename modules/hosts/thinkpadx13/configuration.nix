@@ -9,6 +9,7 @@
       self.nixosModules.thinkpadx13Hardware
       self.nixosModules.basicos
       self.nixosModules.flatpak
+      self.nixosModules.appImage
       # === Entorno de escritorio ===
       self.nixosModules.niri
       self.nixosModules.noctalia
@@ -103,7 +104,6 @@
       blanket # reproducir sonidos ambientales
       eyedropper
       flameshot # capturas de pantalla
-      gearlever # administrador de AppImages
       kdePackages.okular
       meld
       obsidian
@@ -128,12 +128,6 @@
       crosspipe
       qlcplus
     ];
-
-    # Soporte para AppImages
-    programs.appimage = {
-      enable = true;
-      binfmt = true;
-    };
 
     # Habilitar Tailscale
     services.tailscale.enable = true;
