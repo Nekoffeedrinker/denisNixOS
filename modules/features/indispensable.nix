@@ -77,6 +77,7 @@
       font-manager
       gparted
       localsend
+      mission-center
     ];
 
     # Instalar firefox.

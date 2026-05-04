@@ -125,6 +125,7 @@
       obs-studio
 
       # Producción y teatro
+      pwvucontrol
       crosspipe
       qlcplus
     ];
