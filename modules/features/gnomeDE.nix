@@ -1,4 +1,4 @@
-{lib, ...}: {
+{...}: {
   flake.nixosModules.gnome = {pkgs, ...}: {
     # Instalar el entorno de escritorio GNOME
     services.desktopManager.gnome.enable = true;
@@ -13,6 +13,10 @@
       yelp # Ayuda
       # gnome-system-monitor # Monitor del sistema
       # gnome-software      # Software
+    ];
+
+    environment.systemPackages = with pkgs; [
+      gnome-tweaks
     ];
   };
 }
