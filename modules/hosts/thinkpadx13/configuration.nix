@@ -11,6 +11,7 @@
       self.nixosModules.flatpak
       self.nixosModules.appImage
       # === Entorno de escritorio ===
+      self.nixosModules.gnome
       self.nixosModules.niri
       self.nixosModules.noctalia
       self.nixosModules.noctaliaBatThresh
@@ -87,6 +88,14 @@
       # ];
     };
 
+    # ==================== Entorno de escritorio ====================
+
+    # Habilitar el sistema de ventanas X11
+    services.xserver.enable = true;
+
+    # Habilitar GDM (Genome Display Manager)
+    services.displayManager.gdm.enable = true;
+
     # ==================== Paquetes / Programas ====================
 
     # Allow unfree packages
@@ -135,27 +144,6 @@
     #   enable = true;
     #   enableSSHSupport = true;
     # };
-
-    # ==================== Entorno de escritorio ====================
-
-    # Enable the X11 windowing system.
-    services.xserver.enable = true;
-
-    # Enable the GNOME Desktop Environment.
-    services.displayManager.gdm.enable = true;
-    services.desktopManager.gnome.enable = true;
-
-    environment.gnome.excludePackages = with pkgs; [
-      gnome-font-viewer # Tipografías
-      gnome-connections # Conexiones
-      gnome-contacts # Contactos
-      gnome-maps # Mapas
-      gnome-weather # Meteorología
-      gnome-tour # Tour
-      yelp # Ayuda
-      # gnome-system-monitor # Monitor del sistema
-      # gnome-software      # Software
-    ];
 
     # ==================== Variables de entorno ====================
 
