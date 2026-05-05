@@ -17,6 +17,13 @@
 
     environment.systemPackages = with pkgs; [
       gnome-tweaks
+      gnomeExtensions.copyous
+      # dependencias copyous
+      libgda5
+      gsound
+      gnomeExtensions.status-tray
+      gnomeExtensions.launch-new-instance
+      gnomeExtensions.pip-on-top
     ];
   };
 }
