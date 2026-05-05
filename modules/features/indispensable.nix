@@ -49,9 +49,11 @@
     environment.systemPackages = with pkgs; [
       wget
 
-      # Terminal (cli) ===
+      # Terminal (cli)
       kitty
       neovim
+      git
+      delta # pager de git diff
       stow
       fastfetch
       hyfetch # pride fetch
@@ -68,10 +70,14 @@
       (yazi.override {
         _7zz = _7zz-rar;
       })
-
-      # Git
-      git
-      delta # pager de git mejorado
+      # Arte ASCII
+      figlet # escrito en letras grandes
+      cowsay # una vaca diciendo cosas
+      # “terminal fun”
+      cbonsai # arbol bonsai
+      cmatrix # caracteres cayendo en cascada
+      fortune-kind # como una galleta china
+      sl # steam locomotive
 
       # Gui
       font-manager
