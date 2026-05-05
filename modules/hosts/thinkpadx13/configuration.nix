@@ -130,9 +130,6 @@
       qlcplus
     ];
 
-    # Habilitar Tailscale
-    services.tailscale.enable = true;
-
     # Some programs need SUID wrappers, can be configured further or are
     # started in sudo usermod -a -G input $USERuser sessions.
     # programs.mtr.enable = true;
@@ -158,6 +155,9 @@
     };
 
     # ==================== Servicios ====================
+
+    # Habilitar Tailscale
+    services.tailscale.enable = true;
 
     # Iniciar Syncthing
     services.syncthing = {
