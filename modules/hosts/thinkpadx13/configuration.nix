@@ -19,6 +19,7 @@
       self.nixosModules.doomEmacs
       self.nixosModules.miniJuegos
       self.nixosModules.steam
+      self.nixosModules.minecraft
       self.nixosModules.virtManager
       self.nixosModules.teatro
     ];
