@@ -19,6 +19,7 @@
       self.nixosModules.doomEmacs
       self.nixosModules.steam
       self.nixosModules.virtManager
+      self.nixosModules.teatro
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -123,11 +124,6 @@
       # Productión de video
       kdePackages.kdenlive
       obs-studio
-
-      # Producción y teatro
-      pwvucontrol
-      crosspipe
-      qlcplus
     ];
 
     # Some programs need SUID wrappers, can be configured further or are
