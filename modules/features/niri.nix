@@ -1,4 +1,4 @@
-{...}: {
+{inputs, ...}: {
   flake.nixosModules.niri = {pkgs, ...}: {
     # Instalar Niri
     programs.niri.enable = true;
@@ -15,6 +15,7 @@
       pkgs.xwayland-satellite
       pkgs.adwaita-icon-theme
       pkgs.hicolor-icon-theme
+      inputs.niri-float-sticky.packages.${pkgs.system}.default
     ];
   };
 }
