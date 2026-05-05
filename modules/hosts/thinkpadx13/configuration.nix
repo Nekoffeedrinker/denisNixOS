@@ -22,6 +22,8 @@
       self.nixosModules.steam
       self.nixosModules.minecraft
       self.nixosModules.virtManager
+      self.nixosModules.prodImagen
+      self.nixosModules.prodVideo
       self.nixosModules.teatro
     ];
 
@@ -124,17 +126,6 @@
       vscode
       zapzap
       zotero
-
-      # Productión de imagen
-      eyedropper
-      gimp
-      inkscape
-      lunacy
-      scribus
-
-      # Productión de video
-      kdePackages.kdenlive
-      obs-studio
     ];
 
     # Some programs need SUID wrappers, can be configured further or are
