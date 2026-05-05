@@ -17,6 +17,7 @@
       # self.nixosModules.denisDMS
       # === Aplicaciones ===
       self.nixosModules.doomEmacs
+      self.nixosModules.miniJuegos
       self.nixosModules.steam
       self.nixosModules.virtManager
       self.nixosModules.teatro
