@@ -5,13 +5,16 @@
       eyedropper
       gimp
       inkscape
-      lunacy
+      # lunacy
       scribus
     ];
 
     # Flatpak
     services.flatpak.packages = [
-      # Aquí instalar los flatpaks
+      {
+        appId = "com.icons8.Lunacy";
+        origin = "flathub";
+      }
     ];
   };
 }
