@@ -5,8 +5,9 @@
       eyedropper
       gimp
       inkscape
-      # lunacy
       scribus
+      switcheroo # Convertir archivos de imagen
+      upscayl # Escalar imágenes
     ];
 
     # Flatpak
