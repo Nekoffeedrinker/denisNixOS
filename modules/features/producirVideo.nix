@@ -8,7 +8,10 @@
 
     # Flatpak
     services.flatpak.packages = [
-      # Aquí instalar los flatpaks
+      {
+        appId = "no.mifi.losslesscut";
+        origin = "flathub";
+      }
     ];
   };
 }
