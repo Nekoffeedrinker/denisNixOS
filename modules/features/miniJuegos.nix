@@ -4,6 +4,7 @@
     environment.systemPackages = with pkgs; [
       gnome-mines
       gnome-chess
+      stockfish # IA de ajedrez
       gnome-sudoku
       kdePackages.kpat
     ];
