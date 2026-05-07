@@ -25,6 +25,7 @@
         }) [
           "com.github.tchx84.Flatseal"
           "com.parsecgaming.parsec"
+          "dev.geopjr.Collision" # Verigicar archivos
         ];
     };
   };
