@@ -10,6 +10,7 @@
       self.nixosModules.basicos
       self.nixosModules.flatpak
       self.nixosModules.appImage
+      self.nixosModules.distrobox
       # === Entorno de escritorio ===
       self.nixosModules.gnome
       self.nixosModules.niri
