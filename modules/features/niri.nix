@@ -15,7 +15,7 @@
       pkgs.xwayland-satellite
       pkgs.adwaita-icon-theme
       pkgs.hicolor-icon-theme
-      inputs.niri-float-sticky.packages.${pkgs.system}.default
+      inputs.niri-float-sticky.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };
 }
