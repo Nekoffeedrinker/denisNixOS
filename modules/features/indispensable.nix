@@ -80,6 +80,7 @@
       sl # steam locomotive
 
       # Gui
+      easyeffects
       font-manager
       gparted
       localsend
