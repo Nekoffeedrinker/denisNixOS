@@ -17,6 +17,12 @@
 
     environment.systemPackages = with pkgs; [
       gnome-tweaks
+
+      # Miniaturas de video
+      ffmpeg-headless
+      ffmpegthumbnailer
+
+      # === Extensiones ===
       # (gnomeExtensions.copyous.overrideAttrs (old: {
       #   buildInputs =
       #     (old.buildInputs or [])
