@@ -58,6 +58,7 @@
       fastfetch
       hyfetch # pride fetch
       # herramientas
+      opencode
       btop # monitor de recursos
       tree # arbol de directorios
       fzf # búsqueda chida
