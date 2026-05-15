@@ -25,6 +25,7 @@
       self.nixosModules.virtManager
       self.nixosModules.prodImagen
       self.nixosModules.prodVideo
+      self.nixosModules.affinity
       self.nixosModules.teatro
     ];
 
