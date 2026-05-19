@@ -23,6 +23,7 @@
       self.nixosModules.steam
       self.nixosModules.minecraft
       self.nixosModules.virtManager
+      self.nixosModules.prodAudio
       self.nixosModules.prodImagen
       self.nixosModules.prodVideo
       self.nixosModules.affinity
