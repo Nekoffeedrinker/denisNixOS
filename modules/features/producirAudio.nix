@@ -9,6 +9,10 @@
     # Flatpak
     services.flatpak.packages = [
       {
+        appId = "org.audacityteam.Audacity";
+        origin = "flathub";
+      }
+      {
         appId = "com.bitwig.BitwigStudio";
         origin = "flathub";
       }
