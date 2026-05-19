@@ -4,6 +4,8 @@
     environment.systemPackages = with pkgs; [
       pwvucontrol # volumen e interfaces de audio
       crosspipe # Rutear el audio
+
+      ardour
     ];
 
     # Flatpak
