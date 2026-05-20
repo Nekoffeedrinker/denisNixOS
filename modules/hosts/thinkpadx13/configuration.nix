@@ -124,6 +124,7 @@
       meld
       obsidian
       onlyoffice-desktopeditors
+      pdfarranger
       spotify
       tangram # contenedor para webapps
       vscode
