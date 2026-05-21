@@ -121,6 +121,7 @@
       blanket # reproducir sonidos ambientales
       flameshot # capturas de pantalla
       kdePackages.okular
+      libreoffice
       meld
       obsidian
       onlyoffice-desktopeditors
