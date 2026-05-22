@@ -16,6 +16,10 @@
         appId = "com.icons8.Lunacy";
         origin = "flathub";
       }
+      {
+        appId = "io.github.shonebinu.Defuse";
+        origin = "flathub";
+      }
     ];
   };
 }
