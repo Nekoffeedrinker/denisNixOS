@@ -17,6 +17,9 @@
       hunspellDicts.es-mx
       hunspellDicts.en-us
 
+      # gramática mediante LangTool
+      eloquent
+
       # autoformater
       shfmt
 
