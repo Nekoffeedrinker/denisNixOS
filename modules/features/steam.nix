@@ -1,6 +1,10 @@
-{self, ...}: {
+{...}: {
   flake.nixosModules.steam = {pkgs, ...}: {
-    imports = [self.nixosModules.graficos];
+    # Habilitar hardware gráfico
+    hardware.graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
 
     # Arreglar la pantalla negra cuando se abre en Niri
     nixpkgs.overlays = [
