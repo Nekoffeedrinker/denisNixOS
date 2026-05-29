@@ -1,5 +1,9 @@
-{...}: {
+{self, ...}: {
   flake.nixosModules.teatro = {pkgs, ...}: {
+    imports = [
+      self.nixosModules.flatpak
+    ];
+
     # Paquetes
     environment.systemPackages = with pkgs; [
       pwvucontrol # volumen e interfaces de audio
@@ -8,12 +12,12 @@
     ];
 
     # Flatpak
-    services.flatpak.packages = [
-      # Linux Show Player flatpack
-      {
-        appId = "org.linuxshowplayer.LinuxShowPlayer";
+    services.flatpak.packages =
+      map (id: {
+        appId = id;
         origin = "flathub";
-      }
-    ];
+      }) [
+        "org.linuxshowplayer.LinuxShowPlayer"
+      ];
   };
 }

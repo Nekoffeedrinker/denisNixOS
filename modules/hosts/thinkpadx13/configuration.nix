@@ -106,8 +106,7 @@
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
 
-    # List packages installed in system profile. To search, run:
-    # $ nix search wget
+    # Paquetes en Nixpkgs
     environment.systemPackages = with pkgs; [
       #
       # Terminal (cli)
@@ -132,6 +131,18 @@
       zapzap
       zotero
     ];
+
+    # Paquetes en Flathub
+    services.flatpak.packages =
+      map (id: {
+        appId = id;
+        origin = "flathub";
+      }) [
+        "com.parsecgaming.parsec"
+        "dev.geopjr.Collision" # Verificar archivos
+        "io.github.nokse22.asciidraw"
+        "com.mardojai.DiccionarioLengua"
+      ];
 
     # Some programs need SUID wrappers, can be configured further or are
     # started in sudo usermod -a -G input $USERuser sessions.

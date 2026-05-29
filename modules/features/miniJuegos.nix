@@ -1,5 +1,9 @@
-{...}: {
+{self, ...}: {
   flake.nixosModules.miniJuegos = {pkgs, ...}: {
+    imports = [
+      self.nixosModules.flatpak
+    ];
+
     # Paquetes
     environment.systemPackages = with pkgs; [
       gnome-mines

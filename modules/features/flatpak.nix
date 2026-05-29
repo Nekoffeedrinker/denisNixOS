@@ -17,16 +17,17 @@
           name = "flathub";
           location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
         }
+        {
+          name = "flathub-beta";
+          location = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
+        }
       ];
-      packages =
-        map (id: {
-          appId = id;
+      packages = [
+        {
+          appId = "com.github.tchx84.Flatseal";
           origin = "flathub";
-        }) [
-          "com.github.tchx84.Flatseal"
-          "com.parsecgaming.parsec"
-          "dev.geopjr.Collision" # Verigicar archivos
-        ];
+        }
+      ];
     };
   };
 }

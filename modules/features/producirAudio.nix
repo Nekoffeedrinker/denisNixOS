@@ -1,5 +1,9 @@
-{...}: {
+{self, ...}: {
   flake.nixosModules.prodAudio = {pkgs, ...}: {
+    imports = [
+      self.nixosModules.flatpak
+    ];
+
     # Paquetes
     environment.systemPackages = with pkgs; [
       pwvucontrol # volumen e interfaces de audio
@@ -9,15 +13,13 @@
     ];
 
     # Flatpak
-    services.flatpak.packages = [
-      {
-        appId = "org.audacityteam.Audacity";
+    services.flatpak.packages =
+      map (id: {
+        appId = id;
         origin = "flathub";
-      }
-      # {
-      #   appId = "com.bitwig.BitwigStudio";
-      #   origin = "flathub";
-      # }
-    ];
+      }) [
+        "org.audacityteam.Audacity"
+        # "com.bitwig.BitwigStudio"
+      ];
   };
 }

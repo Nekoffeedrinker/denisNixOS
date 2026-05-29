@@ -1,5 +1,9 @@
-{...}: {
+{self, ...}: {
   flake.nixosModules.prodImagen = {pkgs, ...}: {
+    imports = [
+      self.nixosModules.flatpak
+    ];
+
     # Paquetes
     environment.systemPackages = with pkgs; [
       eyedropper
@@ -11,15 +15,13 @@
     ];
 
     # Flatpak
-    services.flatpak.packages = [
-      {
-        appId = "com.icons8.Lunacy";
+    services.flatpak.packages =
+      map (id: {
+        appId = id;
         origin = "flathub";
-      }
-      {
-        appId = "io.github.shonebinu.Defuse";
-        origin = "flathub";
-      }
-    ];
+      }) [
+        "com.icons8.Lunacy"
+        "io.github.shonebinu.Defuse"
+      ];
   };
 }
