@@ -1,5 +1,10 @@
-{...}: {
-  flake.nixosModules.davinciResolveIntel = {pkgs, ...}: {
+{inputs, ...}: {
+  flake.nixosModules.davinciResolveIntel = {pkgs, ...}: let
+    pkgs-igc-fix = import inputs.nixpkgs-igc-fix {
+      system = "x86_64-linux";
+      config.allowUnfree = true;
+    };
+  in {
     # instalar davinci
     environment.systemPackages = with pkgs; [
       davinci-resolve
@@ -9,8 +14,10 @@
     hardware.graphics = {
       enable = true;
       enable32Bit = true;
-      extraPackages = with pkgs; [
-        intel-compute-runtime-legacy1 # Para Intel Gen 11 (tu i5-1135G7)
+      extraPackages = [
+        pkgs-igc-fix.intel-compute-runtime-legacy1
+        # Para Intel Gen 11 (El i5-1135G7 de la ThinkPad X13 Gen 2)
+        # pineado a un commit específico para que funcione
       ];
     };
   };

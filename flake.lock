@@ -314,6 +314,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-igc-fix": {
+      "locked": {
+        "lastModified": 1748465366,
+        "narHash": "sha256-SKYjVl01TGWfeg0F2oJSPyULyxgyBoLsPNzcMLnJsNc=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "0c3fc1cd3494aa52a2c111d5f18a7689fd15ab83",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "0c3fc1cd3494aa52a2c111d5f18a7689fd15ab83",
+        "type": "github"
+      }
+    },
     "nixpkgs-lib": {
       "locked": {
         "lastModified": 1777168982,
@@ -549,6 +565,7 @@
         "niri-float-sticky": "niri-float-sticky",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs_5",
+        "nixpkgs-igc-fix": "nixpkgs-igc-fix",
         "noctalia": "noctalia",
         "wrapper-modules": "wrapper-modules"
       }

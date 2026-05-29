@@ -26,6 +26,9 @@
     };
 
     affinity-nix.url = "github:mrshmllow/affinity-nix";
+
+    # Davinci Resolve en un commit que funciona para intel
+    nixpkgs-igc-fix.url = "github:nixos/nixpkgs/0c3fc1cd3494aa52a2c111d5f18a7689fd15ab83";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
