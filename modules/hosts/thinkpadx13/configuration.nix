@@ -27,6 +27,7 @@
       self.nixosModules.prodImagen
       self.nixosModules.prodVideo
       self.nixosModules.affinity
+      self.nixosModules.davinciResolveIntel
       self.nixosModules.teatro
     ];
 
