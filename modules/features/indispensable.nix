@@ -53,6 +53,7 @@
       kitty
       neovim
       git
+      lazygit
       delta # pager de git diff
       stow
       fastfetch
