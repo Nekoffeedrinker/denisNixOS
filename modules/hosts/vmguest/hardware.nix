@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.virtualMachine-Hardware = {
+  flake.nixosModules.vmguestHardware = {
     config,
     lib,
     modulesPath,

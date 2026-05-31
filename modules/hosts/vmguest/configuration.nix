@@ -1,12 +1,12 @@
 {self, ...}: {
-  flake.nixosModules.virtualMachine-Configuration = {
+  flake.nixosModules.vmguestConfiguration = {
     pkgs,
     mainUser,
     ...
   }: {
     # Importar otros módulos
     imports = [
-      self.nixosModules.virtualMachine-Hardware
+      self.nixosModules.vmguestHardware
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -23,7 +23,7 @@
   services.qemuGuest.enable = true;
 
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "vmguest"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -126,6 +126,16 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+
+  # ==================== Variables de entorno ====================
+  
+  # Ubicación del flake (necesario para nh)
+  environment.sessionVariables = {
+    NH_FLAKE = "/home/denis/denisNixOS/";
+  };
+
+  # ==================== Sistem state version ====================
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
