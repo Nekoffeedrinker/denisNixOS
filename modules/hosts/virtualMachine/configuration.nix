@@ -1,14 +1,17 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
-{
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+{self, ...}: {
+  flake.nixosModules.virtualMachine-Configuration = {
+    pkgs,
+    mainUser,
+    ...
+  }: {
+    # Importar otros módulos
+    imports = [
+      self.nixosModules.virtualMachine-Hardware
     ];
+
+    nix.settings.experimental-features = ["nix-command" "flakes"];
+
+    # Acá inicia la configuración de nix -------------------------------------
 
   # Bootloader.
   boot.loader.grub.enable = true;
@@ -132,4 +135,7 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.11"; # Did you read the comment?
 
+
+    # Acá termina la config de nix --------------------------------------------
+  };
 }
