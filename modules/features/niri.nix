@@ -17,5 +17,10 @@
       pkgs.hicolor-icon-theme
       inputs.niri-float-sticky.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
+
+    # Poner todas las GTK3 en modo oscuro siempre
+    environment.sessionVariables = {
+      GTK_THEME = "Adwaita:dark";
+    };
   };
 }
