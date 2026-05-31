@@ -17,11 +17,5 @@
       pkgs.hicolor-icon-theme
       inputs.niri-float-sticky.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
-
-    environment.shellAliases = {
-      virt-manager = "GTK_THEME=Adwaita:dark virt-manager";
-      meld = "GTK_THEME=Adwaita:dark meld";
-      gparted = "GTK_THEME=Adwaita:dark gparted";
-    };
   };
 }
