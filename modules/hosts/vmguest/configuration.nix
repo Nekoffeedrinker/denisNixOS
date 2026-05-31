@@ -99,12 +99,14 @@
     neovim
     git
     stow
+    lazygit
     # Utilidades nix
     alejandra
     nixd
     nh
     nix-output-monitor
     nvd
+    # Cosas de la maquina virtual
     spice-vdagent
   ];
 
