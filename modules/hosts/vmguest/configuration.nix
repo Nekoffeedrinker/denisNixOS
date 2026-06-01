@@ -8,6 +8,7 @@
     imports = [
       self.nixosModules.vmguestHardware
       self.nixosModules.indispensable
+      self.nixosModules.doomEmacs
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
