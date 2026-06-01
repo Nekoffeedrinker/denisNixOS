@@ -20,10 +20,6 @@
     boot.loader.grub.device = "/dev/vda";
     boot.loader.grub.useOSProber = true;
 
-    # Virtualización (guest/invitado)
-    services.spice-vdagentd.enable = true;
-    services.qemuGuest.enable = true;
-
     # Distribución de teclado (en X11)
     services.xserver.xkb = {
       layout = "us";
@@ -74,6 +70,25 @@
       kdePackages.kate
       spice-vdagent
     ];
+
+    # ===================== Invitado de Maquina virtual =====================
+
+    # Virtualizando en virtManager
+    services.qemuGuest.enable = true;
+
+    # Para el portapapales compartido
+    services.spice-vdagentd.enable = true;
+
+    # Lanzar SPICE vdagent como servicio de usuario
+    systemd.user.services.spice-vdagent = {
+      description = "SPICE vdagent client";
+      wantedBy = ["graphical-session.target"];
+      partOf = ["graphical-session.target"];
+      serviceConfig = {
+        ExecStart = "${pkgs.spice-vdagent}/bin/spice-vdagent -x";
+        Restart = "on-failure";
+      };
+    };
 
     # ===================== Sistem state version =====================
 
