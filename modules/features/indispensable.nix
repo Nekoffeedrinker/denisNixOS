@@ -36,9 +36,6 @@
       #media-session.enable = true;
     };
 
-    # Comunicarse con reproductores de medios (atajos para pausar y reproducir)
-    services.playerctld.enable = true;
-
     # =============== Seguridad ===============
 
     # Mostrar caracteres de contraseña en el sudo
