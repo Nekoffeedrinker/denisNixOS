@@ -34,10 +34,6 @@
 
       # Compilar tree-sitter
       gcc
-
-      # Typst
-      typst
-      tinymist # LSP
     ];
     # Poder ejecutar los comandos doom
     environment.variables = {
