@@ -117,6 +117,7 @@
       sl # steam locomotive
       syncthing
       typst
+      tinymist # LSP de typst
 
       # Gui
       blanket # reproducir sonidos ambientales
