@@ -40,8 +40,8 @@
       tinymist # LSP
     ];
     # Poder ejecutar los comandos doom
-    environment.sessionVariables = {
-      PATH = ["$HOME/.emacs.d/bin"];
+    environment.variables = {
+      PATH = ["$HOME/.config/emacs/bin"];
     };
   };
 }
