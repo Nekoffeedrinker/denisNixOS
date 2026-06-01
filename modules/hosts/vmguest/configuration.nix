@@ -76,19 +76,17 @@
     # Virtualizando en virtManager
     services.qemuGuest.enable = true;
 
-    # Para el portapapales compartido
-    services.spice-vdagentd.enable = true;
-
-    # Lanzar SPICE vdagent como servicio de usuario
-    systemd.user.services.spice-vdagent = {
-      description = "SPICE vdagent client";
-      wantedBy = ["graphical-session.target"];
-      partOf = ["graphical-session.target"];
-      serviceConfig = {
-        ExecStart = "${pkgs.spice-vdagent}/bin/spice-vdagent -x";
-        Restart = "on-failure";
-      };
-    };
+    # # Portapapales compartido (solo X11)
+    # services.spice-vdagentd.enable = true;
+    # systemd.user.services.spice-vdagent = {
+    #   description = "SPICE vdagent client";
+    #   wantedBy = ["graphical-session.target"];
+    #   partOf = ["graphical-session.target"];
+    #   serviceConfig = {
+    #     ExecStart = "${pkgs.spice-vdagent}/bin/spice-vdagent -x";
+    #     Restart = "on-failure";
+    #   };
+    # };
 
     # ===================== Sistem state version =====================
 
