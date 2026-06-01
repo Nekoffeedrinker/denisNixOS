@@ -36,7 +36,7 @@
 
     # Acá inicia la configuración de nix -------------------------------------
 
-    # ==================== Boot / Hardare ====================
+    # ===================== Boot / Hardare =====================
 
     # Bootloader.
     boot.loader.systemd-boot.enable = true;
@@ -59,7 +59,7 @@
     services.power-profiles-daemon.enable = true;
     services.upower.enable = true;
 
-    # ==================== Puntos de montaje ====================
+    # ===================== Puntos de montaje =====================
 
     # Punto de montaje de mi carpeta Gatos
     # fileSystems."/mnt/GATOS" = {
@@ -68,7 +68,7 @@
     #   options = ["defaults"];
     # };
 
-    # ==================== Internet / Bluetooth ====================
+    # ===================== Internet / Bluetooth =====================
 
     # Internet
     networking.networkmanager.enable = true;
@@ -82,7 +82,7 @@
     # networking.proxy.default = "http://user:password@proxy:port/";
     # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-    # ==================== Usuarios ====================
+    # ===================== Usuarios =====================
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.${mainUser} = {
@@ -95,7 +95,7 @@
       # ];
     };
 
-    # ==================== Entorno de escritorio ====================
+    # ===================== Entorno de escritorio =====================
 
     # Habilitar el sistema de ventanas X11
     services.xserver.enable = true;
@@ -103,7 +103,7 @@
     # Habilitar GDM (Genome Display Manager)
     services.displayManager.gdm.enable = true;
 
-    # ==================== Paquetes / Programas ====================
+    # ===================== Paquetes / Programas =====================
 
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
@@ -155,14 +155,14 @@
     #   enableSSHSupport = true;
     # };
 
-    # ==================== Variables de entorno ====================
+    # ===================== Variables de entorno =====================
 
     # Ubicación del flake (necesario para nh)
     environment.sessionVariables = {
       NH_FLAKE = "/home/denis/denisNixOS/";
     };
 
-    # ==================== Servicios ====================
+    # ===================== Servicios =====================
 
     # Habilitar Tailscale
     services.tailscale.enable = true;
@@ -187,7 +187,7 @@
     # Or disable the firewall altogether.
     # networking.firewall.enable = false;
 
-    # ==================== Sistem state version ====================
+    # ===================== Sistem state version =====================
 
     # This value determines the NixOS release from which the default
     # settings for stateful data, like file locations and database versions

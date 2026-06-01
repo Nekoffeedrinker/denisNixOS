@@ -13,7 +13,7 @@
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
 
-    # ==================== Boot / Hardare ====================
+    # ===================== Boot / Hardare =====================
 
     # Bootloader.
     boot.loader.grub.enable = true;
@@ -33,7 +33,7 @@
     # Touchpad
     services.libinput.enable = true;
 
-    # ==================== Nombres y rutas ====================
+    # ===================== Nombres y rutas =====================
 
     # Nombre de la máquina
     networking.hostName = "vmguest";
@@ -43,7 +43,7 @@
       NH_FLAKE = "/home/denis/denisNixOS/";
     };
 
-    # ==================== Usuarios ====================
+    # ===================== Usuarios =====================
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.${mainUser} = {
@@ -53,7 +53,7 @@
       initialPassword = "1234"; # solo para testing
     };
 
-    # ==================== Entorno de escritorio ====================
+    # ===================== Entorno de escritorio =====================
 
     # Enable the X11 windowing system.
     # You can disable this if you're only using the Wayland session.
@@ -63,7 +63,7 @@
     services.displayManager.sddm.enable = true;
     services.desktopManager.plasma6.enable = true;
 
-    # ==================== Paquetes / Programas ====================
+    # ===================== Paquetes / Programas =====================
 
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
@@ -75,7 +75,7 @@
       spice-vdagent
     ];
 
-    # ==================== Sistem state version ====================
+    # ===================== Sistem state version =====================
 
     # This value determines the NixOS release from which the default
     # settings for stateful data, like file locations and database versions
