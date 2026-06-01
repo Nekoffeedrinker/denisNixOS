@@ -7,36 +7,52 @@
     # Importar otros módulos
     imports = [
       self.nixosModules.vmguestHardware
+      self.nixosModules.indispensable
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
 
-    # Acá inicia la configuración de nix -------------------------------------
+    # ==================== Boot / Hardare ====================
 
     # Bootloader.
     boot.loader.grub.enable = true;
     boot.loader.grub.device = "/dev/vda";
     boot.loader.grub.useOSProber = true;
 
-    # Virtualización
+    # Virtualización (guest/invitado)
     services.spice-vdagentd.enable = true;
     services.qemuGuest.enable = true;
 
-    networking.hostName = "vmguest"; # Define your hostname.
-    # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    # Distribución de teclado (en X11)
+    services.xserver.xkb = {
+      layout = "us";
+      variant = "altgr-intl";
+    };
 
-    # Configure network proxy if necessary
-    # networking.proxy.default = "http://user:password@proxy:port/";
-    # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+    # Touchpad
+    services.libinput.enable = true;
 
-    # Enable networking
-    networking.networkmanager.enable = true;
+    # ==================== Nombres y rutas ====================
 
-    # Set your time zone.
-    time.timeZone = "America/Mazatlan";
+    # Nombre de la máquina
+    networking.hostName = "vmguest";
 
-    # Select internationalisation properties.
-    i18n.defaultLocale = "es_MX.UTF-8";
+    # Ubicación del flake (necesario para nh)
+    environment.sessionVariables = {
+      NH_FLAKE = "/home/denis/denisNixOS/";
+    };
+
+    # ==================== Usuarios ====================
+
+    # Define a user account. Don't forget to set a password with ‘passwd’.
+    users.users.${mainUser} = {
+      isNormalUser = true;
+      description = "Denis Pilar";
+      extraGroups = ["networkmanager" "wheel"];
+      initialPassword = "1234"; # solo para testing
+    };
+
+    # ==================== Entorno de escritorio ====================
 
     # Enable the X11 windowing system.
     # You can disable this if you're only using the Wayland session.
@@ -46,47 +62,7 @@
     services.displayManager.sddm.enable = true;
     services.desktopManager.plasma6.enable = true;
 
-    # Configure keymap in X11
-    services.xserver.xkb = {
-      layout = "us";
-      variant = "altgr-intl";
-    };
-
-    # Enable CUPS to print documents.
-    services.printing.enable = true;
-
-    # Enable sound with pipewire.
-    services.pulseaudio.enable = false;
-    security.rtkit.enable = true;
-    services.pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-      # If you want to use JACK applications, uncomment this
-      #jack.enable = true;
-
-      # use the example session manager (no others are packaged yet so this is enabled by default,
-      # no need to redefine it in your config for now)
-      #media-session.enable = true;
-    };
-
-    # Enable touchpad support (enabled default in most desktopManager).
-    # services.xserver.libinput.enable = true;
-
-    # Define a user account. Don't forget to set a password with ‘passwd’.
-    users.users.denis = {
-      isNormalUser = true;
-      description = "Denis Pilar";
-      extraGroups = ["networkmanager" "wheel"];
-      packages = with pkgs; [
-        kdePackages.kate
-        #  thunderbird
-      ];
-    };
-
-    # Install firefox.
-    programs.firefox.enable = true;
+    # ==================== Paquetes / Programas ====================
 
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
@@ -94,46 +70,9 @@
     # List packages installed in system profile. To search, run:
     # $ nix search wget
     environment.systemPackages = with pkgs; [
-      wget
-      neovim
-      git
-      stow
-      lazygit
-      # Utilidades nix
-      alejandra
-      nixd
-      nh
-      nix-output-monitor
-      nvd
-      # Cosas de la maquina virtual
+      kdePackages.kate
       spice-vdagent
     ];
-
-    # Some programs need SUID wrappers, can be configured further or are
-    # started in user sessions.
-    # programs.mtr.enable = true;
-    # programs.gnupg.agent = {
-    #   enable = true;
-    #   enableSSHSupport = true;
-    # };
-
-    # List services that you want to enable:
-
-    # Enable the OpenSSH daemon.
-    # services.openssh.enable = true;
-
-    # Open ports in the firewall.
-    # networking.firewall.allowedTCPPorts = [ ... ];
-    # networking.firewall.allowedUDPPorts = [ ... ];
-    # Or disable the firewall altogether.
-    # networking.firewall.enable = false;
-
-    # ==================== Variables de entorno ====================
-
-    # Ubicación del flake (necesario para nh)
-    environment.sessionVariables = {
-      NH_FLAKE = "/home/denis/denisNixOS/";
-    };
 
     # ==================== Sistem state version ====================
 
@@ -144,7 +83,5 @@
     # Before changing this value read the documentation for this option
     # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
     system.stateVersion = "25.11"; # Did you read the comment?
-
-    # Acá termina la config de nix --------------------------------------------
   };
 }
