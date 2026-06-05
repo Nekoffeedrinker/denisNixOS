@@ -41,8 +41,9 @@
       easyeffects
       font-manager
       gparted
-      localsend
       mission-center
     ];
+
+    programs.localsend.enable = true;
   };
 }
