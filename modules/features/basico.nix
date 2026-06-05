@@ -11,9 +11,6 @@
     # Imprimir documentos usando CUPS
     services.printing.enable = true;
 
-    # Comunicarse con reproductores de medio (atajos para pausar y reproducir)
-    services.playerctld.enable = true;
-
     # =============== Paquetes ===============
     environment.systemPackages = with pkgs; [
       # Terminal (cli)
