@@ -59,7 +59,6 @@
       easyeffects
       obsidian
       qalculate-gtk
-      tangram # contenedor para webapps
 
       # Real Life
       zapzap
@@ -82,7 +81,7 @@
       # Elecrónica
       arduino-cli
       kicad
-      freecad
+      # freecad
 
       # Audio
       pwvucontrol # volumen e interfaces de audio
@@ -94,10 +93,10 @@
       obs-studio
 
       # Imagen
-      eyedropper
-      gimp
       inkscape
-      scribus
+      # gimp
+      # scribus
+      eyedropper # Obtener un color
       switcheroo # Convertir archivos de imagen
       upscayl # Escalar imágenes
 
@@ -114,11 +113,10 @@
         # Herramientas Gui
         "com.parsecgaming.parsec"
         "dev.geopjr.Collision" # Verificar archivos
-        "io.github.nokse22.asciidraw"
-        "com.mardojai.DiccionarioLengua"
+        # "io.github.nokse22.asciidraw"
 
         # Audio
-        "org.audacityteam.Audacity"
+        # "org.audacityteam.Audacity"
         # "com.bitwig.BitwigStudio"
 
         # Video
