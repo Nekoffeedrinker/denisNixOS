@@ -29,7 +29,6 @@
       arduino-cli
       nvtopPackages.intel # monitor de la gráfica
       sl # steam locomotive
-      syncthing
       typst
       tinymist # LSP de typst
 
