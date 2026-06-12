@@ -45,5 +45,24 @@
       gnomeExtensions.launch-new-instance
       gnomeExtensions.pip-on-top
     ];
+
+    # GStreamer en Nautilus
+    nixpkgs.overlays = [
+      (final: prev: {
+        nautilus = prev.nautilus.overrideAttrs (nprev: {
+          buildInputs =
+            nprev.buildInputs
+            ++ (with pkgs.gst_all_1; [
+              gst-plugins-good
+              gst-plugins-bad
+            ]);
+        });
+      })
+    ];
+
+    # plugins de GStreamer
+    environment.variables = {
+      GST_PLUGIN_PATH = "/run/current-system/sw/lib/gstreamer-1.0/";
+    };
   };
 }
