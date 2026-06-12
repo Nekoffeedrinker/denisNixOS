@@ -5,11 +5,6 @@
       self.nixosModules.zsh
     ];
 
-    # =============== Servicios ===============
-
-    # Imprimir documentos usando CUPS
-    services.printing.enable = true;
-
     # =============== Paquetes ===============
     environment.systemPackages = with pkgs; [
       # Terminal (cli)

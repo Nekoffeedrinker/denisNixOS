@@ -93,6 +93,9 @@
 
     # ===================== Servicios =====================
 
+    # Imprimir documentos usando CUPS
+    services.printing.enable = true;
+
     # Habilitar Tailscale
     services.tailscale.enable = true;
 
