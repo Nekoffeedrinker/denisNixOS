@@ -15,15 +15,13 @@
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
 
-    # Acá inicia la configuración de nix -------------------------------------
-
     # ===================== Boot / Hardare =====================
 
     # Bootloader.
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
-    # Teclado (en X11)
+    # Distribución de teclado (en X11)
     services.xserver.xkb = {
       layout = "us";
       variant = "altgr-intl";
@@ -40,6 +38,15 @@
     services.power-profiles-daemon.enable = true;
     services.upower.enable = true;
 
+    # Bluetooth
+    hardware.bluetooth.enable = true;
+
+    # Wifi
+    networking.wireless.enable = true;
+
+    # Imprimir documentos usando CUPS
+    services.printing.enable = true;
+
     # ===================== Puntos de montaje =====================
 
     # Punto de montaje de mi carpeta Gatos
@@ -49,19 +56,15 @@
     #   options = ["defaults"];
     # };
 
-    # ===================== Internet / Bluetooth =====================
+    # ===================== Nombres y rutas =====================
 
-    # Internet
-    networking.networkmanager.enable = true;
-    networking.wireless.enable = true;
+    # Nombre de la máquina
     networking.hostName = "thinkpadx13";
 
-    # Bluetooth
-    hardware.bluetooth.enable = true;
-
-    # Proxy
-    # networking.proxy.default = "http://user:password@proxy:port/";
-    # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+    # Ubicación del flake (necesario para nh)
+    environment.sessionVariables = {
+      NH_FLAKE = "/home/denis/denisNixOS/";
+    };
 
     # ===================== Usuarios =====================
 
@@ -84,17 +87,7 @@
     # Habilitar GDM (Genome Display Manager)
     services.displayManager.gdm.enable = true;
 
-    # ===================== Variables de entorno =====================
-
-    # Ubicación del flake (necesario para nh)
-    environment.sessionVariables = {
-      NH_FLAKE = "/home/denis/denisNixOS/";
-    };
-
     # ===================== Servicios =====================
-
-    # Imprimir documentos usando CUPS
-    services.printing.enable = true;
 
     # Habilitar Tailscale
     services.tailscale.enable = true;
