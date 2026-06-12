@@ -4,26 +4,13 @@
     imports = [
       self.nixosModules.thinkpadx13Hardware
       self.nixosModules.thinkpadx13Programs
-      self.nixosModules.basicos
-      self.nixosModules.flatpak
+      self.nixosModules.indispensable
       # === Entorno de escritorio ===
       self.nixosModules.gnome
       self.nixosModules.niri
       # self.nixosModules.mango
       self.nixosModules.noctalia
       self.nixosModules.noctaliaBatThresh
-      # === Aplicaciones ===
-      self.nixosModules.doomEmacs
-      self.nixosModules.miniJuegos
-      self.nixosModules.steam
-      self.nixosModules.minecraft
-      self.nixosModules.virtManager
-      self.nixosModules.prodAudio
-      self.nixosModules.prodImagen
-      self.nixosModules.prodVideo
-      self.nixosModules.affinity
-      self.nixosModules.davinciResolveIntel
-      self.nixosModules.teatro
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];

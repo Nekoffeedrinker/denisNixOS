@@ -1,5 +1,22 @@
-{...}: {
+{self, ...}: {
   flake.nixosModules.thinkpadx13Programs = {pkgs, ...}: {
+    imports = [
+      self.nixosModules.flatpak
+      self.nixosModules.basicos
+      # === Aplicaciones ===
+      self.nixosModules.doomEmacs
+      self.nixosModules.miniJuegos
+      self.nixosModules.steam
+      self.nixosModules.minecraft
+      self.nixosModules.virtManager
+      self.nixosModules.prodAudio
+      self.nixosModules.prodImagen
+      self.nixosModules.prodVideo
+      self.nixosModules.affinity
+      self.nixosModules.davinciResolveIntel
+      self.nixosModules.teatro
+    ];
+
     # ===================== Paquetes / Programas =====================
 
     # Habilitar paquetes no libres (no Open Source)

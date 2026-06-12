@@ -2,7 +2,6 @@
   flake.nixosModules.basicos = {pkgs, ...}: {
     # =============== Importar ===============
     imports = [
-      self.nixosModules.indispensable
       self.nixosModules.zsh
     ];
 
