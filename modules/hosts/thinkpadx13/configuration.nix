@@ -6,15 +6,12 @@
       self.nixosModules.thinkpadx13Programs
       self.nixosModules.basicos
       self.nixosModules.flatpak
-      self.nixosModules.appImage
-      self.nixosModules.distrobox
       # === Entorno de escritorio ===
       self.nixosModules.gnome
       self.nixosModules.niri
       # self.nixosModules.mango
       self.nixosModules.noctalia
       self.nixosModules.noctaliaBatThresh
-      # self.nixosModules.denisDMS
       # === Aplicaciones ===
       self.nixosModules.doomEmacs
       self.nixosModules.miniJuegos
