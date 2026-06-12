@@ -24,29 +24,39 @@
 
     # Paquetes en Nixpkgs
     environment.systemPackages = with pkgs; [
-      #
-      # Terminal (cli)
-      arduino-cli
+      flameshot # capturas de pantalla
+
+      # Herramientas de terminal
       nvtopPackages.intel # monitor de la gráfica
+
+      # Terminal divertida
       sl # steam locomotive
+
+      # Herramientas Gui
+      obsidian
+      qalculate-gtk
+      tangram # contenedor para webapps
+
+      # Real Life
+      zapzap
+      spotify
+      blanket # reproducir sonidos ambientales
+
+      # Ofimática
       typst
       tinymist # LSP de typst
-
-      # Gui
-      blanket # reproducir sonidos ambientales
-      flameshot # capturas de pantalla
       kdePackages.okular
-      libreoffice
-      meld
-      obsidian
-      onlyoffice-desktopeditors
       pdfarranger
-      spotify
-      tangram # contenedor para webapps
-      vscode
-      zapzap
+      libreoffice
+      onlyoffice-desktopeditors
       zotero
-      qalculate-gtk
+
+      # Código
+      vscode
+      meld
+
+      # Elecrónica
+      arduino-cli
       kicad
       freecad
     ];
@@ -57,6 +67,7 @@
         appId = id;
         origin = "flathub";
       }) [
+        # Herramientas Gui
         "com.parsecgaming.parsec"
         "dev.geopjr.Collision" # Verificar archivos
         "io.github.nokse22.asciidraw"
