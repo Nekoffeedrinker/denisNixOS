@@ -2,19 +2,16 @@
   flake.nixosModules.thinkpadx13Programs = {pkgs, ...}: {
     imports = [
       self.nixosModules.flatpak
-      self.nixosModules.basicos
+      self.nixosModules.zsh
       # === Aplicaciones ===
       self.nixosModules.doomEmacs
+      self.nixosModules.virtManager
+      self.nixosModules.affinity
+      self.nixosModules.davinciResolveIntel
+      # === Juegos ===
       self.nixosModules.miniJuegos
       self.nixosModules.steam
       self.nixosModules.minecraft
-      self.nixosModules.virtManager
-      self.nixosModules.prodAudio
-      self.nixosModules.prodImagen
-      self.nixosModules.prodVideo
-      self.nixosModules.affinity
-      self.nixosModules.davinciResolveIntel
-      self.nixosModules.teatro
     ];
 
     # ===================== Paquetes / Programas =====================
@@ -22,17 +19,44 @@
     # Habilitar paquetes no libres (no Open Source)
     nixpkgs.config.allowUnfree = true;
 
+    # Instalar LocalSend
+    programs.localsend.enable = true;
+
     # Paquetes en Nixpkgs
     environment.systemPackages = with pkgs; [
       flameshot # capturas de pantalla
 
       # Herramientas de terminal
+      kitty
+      delta # pager de git diff
+      opencode
+      tree # arbol de directorios
+      fzf # búsqueda chida
+      bat # cat mejorado
+      eza # ls mejorado
+      fd # find mejorado
+      ripgrep # grep mejorado (se usa `rg`)
+      usbutils # trabajar con USB
+      ncdu # analizar el espacio en disco
+      (yazi.override {
+        _7zz = _7zz-rar;
+      })
       nvtopPackages.intel # monitor de la gráfica
 
       # Terminal divertida
+      cbonsai # arbol bonsai
+      cmatrix # caracteres cayendo en cascada
+      fortune-kind # como una galleta china
       sl # steam locomotive
+      # Arte ASCII
+      figlet # escrito en letras grandes
+      cowsay # una vaca diciendo cosas
 
       # Herramientas Gui
+      gparted
+      font-manager
+      mission-center
+      easyeffects
       obsidian
       qalculate-gtk
       tangram # contenedor para webapps
@@ -59,6 +83,26 @@
       arduino-cli
       kicad
       freecad
+
+      # Audio
+      pwvucontrol # volumen e interfaces de audio
+      crosspipe # Rutear el audio
+      ardour
+
+      # Video
+      kdePackages.kdenlive
+      obs-studio
+
+      # Imagen
+      eyedropper
+      gimp
+      inkscape
+      scribus
+      switcheroo # Convertir archivos de imagen
+      upscayl # Escalar imágenes
+
+      # Teatro
+      qlcplus
     ];
 
     # Paquetes en Flathub
@@ -72,6 +116,30 @@
         "dev.geopjr.Collision" # Verificar archivos
         "io.github.nokse22.asciidraw"
         "com.mardojai.DiccionarioLengua"
+
+        # Audio
+        "org.audacityteam.Audacity"
+        # "com.bitwig.BitwigStudio"
+
+        # Video
+        "no.mifi.losslesscut"
+
+        # Imagen
+        "com.icons8.Lunacy"
+        "io.github.shonebinu.Defuse"
+
+        # Teatro
+        "org.linuxshowplayer.LinuxShowPlayer"
+      ]
+      ++ [
+        rec {
+          appId = "dk.nikse.subtitleedit";
+          sha256 = "6d8e584074bf1aec68eedb65e3c119f3545f2daeb3105367fd5a5db7e694656b";
+          bundle = "${pkgs.fetchurl {
+            url = "https://github.com/SubtitleEdit/subtitleedit/releases/download/v5.0.0-beta24/SubtitleEdit-linux-x64.flatpak";
+            inherit sha256;
+          }}";
+        }
       ];
 
     # Some programs need SUID wrappers, can be configured further or are
