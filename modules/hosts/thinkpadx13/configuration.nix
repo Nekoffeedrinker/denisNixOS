@@ -133,6 +133,9 @@
       vscode
       zapzap
       zotero
+      qalculate-gtk
+      kicad
+      freecad
     ];
 
     # Paquetes en Flathub
