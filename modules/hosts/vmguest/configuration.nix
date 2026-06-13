@@ -7,8 +7,8 @@
     # Importar otros módulos
     imports = [
       self.nixosModules.vmguestHardware
+      self.nixosModules.vmguestPrograms
       self.nixosModules.indispensable
-      self.nixosModules.doomEmacs
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
