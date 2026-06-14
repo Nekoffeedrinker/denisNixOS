@@ -58,6 +58,7 @@
       font-manager
       mission-center
       easyeffects
+      gimagereader
 
       # General
       obsidian
