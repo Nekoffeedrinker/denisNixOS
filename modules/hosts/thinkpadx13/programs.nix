@@ -4,6 +4,7 @@
       self.nixosModules.flatpak
       self.nixosModules.zsh
       # === Aplicaciones ===
+      self.nixosModules.heliumBrowser
       self.nixosModules.doomEmacs
       self.nixosModules.virtManager
       self.nixosModules.affinity
