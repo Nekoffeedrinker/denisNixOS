@@ -114,6 +114,9 @@
         # Herramientas Gui
         "com.parsecgaming.parsec"
         "dev.geopjr.Collision" # Verificar archivos
+
+        # General
+        "app.zen_browser.zen"
         # "io.github.nokse22.asciidraw"
 
         # Audio
