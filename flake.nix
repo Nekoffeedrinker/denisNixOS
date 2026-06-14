@@ -4,7 +4,6 @@
 
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
-
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
@@ -32,7 +31,8 @@
 
     affinity-nix.url = "github:mrshmllow/affinity-nix";
 
-    # Davinci Resolve en un commit que funciona para intel
+    # Commit en el que funciona intel-compute-runtime-legacy para mi ThinkPad X13 gen 2.
+    # Es un paquete gráfico de las GPU intel que es necesario para Davinci Resolve.
     nixpkgs-igc-fix.url = "github:nixos/nixpkgs/0c3fc1cd3494aa52a2c111d5f18a7689fd15ab83";
   };
 
