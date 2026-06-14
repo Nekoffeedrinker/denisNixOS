@@ -58,7 +58,10 @@
       font-manager
       mission-center
       easyeffects
+
+      # General
       obsidian
+      calibre
       qalculate-gtk
 
       # Real Life
