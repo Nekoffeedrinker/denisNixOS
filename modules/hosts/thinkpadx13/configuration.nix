@@ -9,6 +9,7 @@
       self.nixosModules.gnome
       self.nixosModules.niri
       # self.nixosModules.mango
+      # self.nixosModules.denisDMS
       self.nixosModules.noctalia
       self.nixosModules.noctaliaBatThresh
     ];
