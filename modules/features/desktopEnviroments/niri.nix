@@ -19,6 +19,9 @@
     services.playerctld.enable = true;
 
     environment.systemPackages = [
+      # Controlar el brillo del monitor
+      pkgs.brightnessctl
+
       # Herramienta para ejecutar apps X11 en Wayland
       pkgs.xwayland-satellite
 
