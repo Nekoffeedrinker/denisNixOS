@@ -9,6 +9,9 @@
       self.nixosModules.vmguestHardware
       self.nixosModules.vmguestPrograms
       self.nixosModules.indispensable
+      # === Entorno de escritorio ===
+      self.nixosModules.KdePlasma
+      # self.nixosModules.gnome
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -56,19 +59,16 @@
     # You can disable this if you're only using the Wayland session.
     services.xserver.enable = true;
 
-    # Enable the KDE Plasma Desktop Environment.
-    services.displayManager.sddm.enable = true;
-    services.desktopManager.plasma6.enable = true;
+    # TEMP:
+    # Habilitar GDM (Genome Display Manager)
+    services.displayManager.gdm.enable = true;
 
     # ===================== Paquetes / Programas =====================
 
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
 
-    # List packages installed in system profile. To search, run:
-    # $ nix search wget
     environment.systemPackages = with pkgs; [
-      kdePackages.kate
       spice-vdagent
     ];
 
