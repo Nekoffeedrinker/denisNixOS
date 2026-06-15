@@ -10,8 +10,8 @@
       self.nixosModules.vmguestPrograms
       self.nixosModules.indispensable
       # === Entorno de escritorio ===
-      self.nixosModules.KdePlasma
-      # self.nixosModules.gnome
+      # self.nixosModules.KdePlasma
+      self.nixosModules.gnome
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -59,11 +59,11 @@
     # You can disable this if you're only using the Wayland session.
     services.xserver.enable = true;
 
-    # Habilitar SDDM (Simple Desktop Display Manager)
-    services.displayManager.sddm.enable = true;
+    # # Habilitar SDDM (Simple Desktop Display Manager)
+    # services.displayManager.sddm.enable = true;
 
-    # # Habilitar GDM (Genome Display Manager)
-    # services.displayManager.gdm.enable = true;
+    # Habilitar GDM (Genome Display Manager)
+    services.displayManager.gdm.enable = true;
 
     # ===================== Paquetes / Programas =====================
 
