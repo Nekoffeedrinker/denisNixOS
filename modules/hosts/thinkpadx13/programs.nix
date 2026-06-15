@@ -96,6 +96,7 @@
       # Video
       kdePackages.kdenlive
       obs-studio
+      friction-graphics
 
       # Imagen
       inkscape
