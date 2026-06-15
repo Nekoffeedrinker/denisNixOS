@@ -59,7 +59,9 @@
     # You can disable this if you're only using the Wayland session.
     services.xserver.enable = true;
 
-    # # TEMP:
+    # Habilitar SDDM (Simple Desktop Display Manager)
+    services.displayManager.sddm.enable = true;
+
     # # Habilitar GDM (Genome Display Manager)
     # services.displayManager.gdm.enable = true;
 
