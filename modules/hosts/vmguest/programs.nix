@@ -3,7 +3,7 @@
     imports = [
       self.nixosModules.flatpak
       # === Aplicaciones ===
-      self.nixosModules.doomEmacs
+      # self.nixosModules.doomEmacs
     ];
 
     # ===================== Paquetes / Programas =====================
@@ -12,6 +12,7 @@
     environment.systemPackages = with pkgs; [
       fd # find mejorado
       ripgrep # grep mejorado (se usa `rg`)
+      kitty
     ];
 
     # Paquetes en Flathub
