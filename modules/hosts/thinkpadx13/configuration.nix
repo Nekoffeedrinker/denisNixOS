@@ -2,6 +2,7 @@
   flake.nixosModules.thinkpadx13Configuration = {mainUser, ...}: {
     # Importar otros módulos
     imports = [
+      # /etc/nixos/hardware-configuration.nix
       self.nixosModules.thinkpadx13Hardware
       self.nixosModules.thinkpadx13Programs
       self.nixosModules.indispensable
