@@ -7,7 +7,7 @@
       self.nixosModules.heliumBrowser
       self.nixosModules.doomEmacs
       self.nixosModules.virtManager
-      self.nixosModules.affinity
+      # self.nixosModules.affinity
       self.nixosModules.davinciResolveIntel
       # === Juegos ===
       self.nixosModules.miniJuegos
