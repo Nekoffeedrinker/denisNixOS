@@ -6,6 +6,7 @@
   }: {
     # Importar otros módulos
     imports = [
+      # /etc/nixos/hardware-configuration.nix
       self.nixosModules.vmguestHardware
       self.nixosModules.vmguestPrograms
       self.nixosModules.indispensable
