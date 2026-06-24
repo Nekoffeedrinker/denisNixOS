@@ -49,9 +49,18 @@
 
       # Minimo indispensable
       neovim
-      git
-      lazygit
       stow
+      git
+      delta # pager de git diff
+      lazygit
+      (yazi.override {
+        _7zz = _7zz-rar;
+      })
+      tree # arbol de directorios
+      eza # ls mejorado
+      bat # cat mejorado
+      fd # find mejorado
+      ripgrep # grep mejorado (se usa `rg`)
 
       # Está bien tenerlas
       fastfetch

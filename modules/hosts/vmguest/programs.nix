@@ -10,8 +10,6 @@
 
     # Paquetes en Nixpkgs
     environment.systemPackages = with pkgs; [
-      fd # find mejorado
-      ripgrep # grep mejorado (se usa `rg`)
       kitty
     ];
 

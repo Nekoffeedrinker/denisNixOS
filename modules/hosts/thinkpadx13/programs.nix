@@ -29,19 +29,10 @@
 
       # Herramientas de terminal
       kitty
-      delta # pager de git diff
       opencode
-      tree # arbol de directorios
       fzf # búsqueda chida
-      bat # cat mejorado
-      eza # ls mejorado
-      fd # find mejorado
-      ripgrep # grep mejorado (se usa `rg`)
       usbutils # trabajar con USB
       ncdu # analizar el espacio en disco
-      (yazi.override {
-        _7zz = _7zz-rar;
-      })
       nvtopPackages.intel # monitor de la gráfica
 
       # Terminal divertida
