@@ -58,7 +58,7 @@ el flake, para evitar conflictos.
 ### 5. Ejecutar la instalación
 
 ``` bash
-nh os boot ~/denisNixOs -H thinkpadx13 -a --impure
+nh os boot ~/denisNixOS -H thinkpadx13 -a --impure
 ```
 
 - Pero remplazando el host para que coincida con el de tu maquina.
