@@ -20,7 +20,12 @@
     # ===================== Boot / Hardare =====================
 
     # Bootloader.
-    boot.loader.systemd-boot.enable = true;
+    boot.loader.grub = {
+      enable = true;
+      device = "nodev";
+      efiSupport = true;
+      # configurationLimit = 3; # cuántas generaciones mostrar
+    };
     boot.loader.efi.canTouchEfiVariables = true;
 
     # Distribución de teclado (en X11)
