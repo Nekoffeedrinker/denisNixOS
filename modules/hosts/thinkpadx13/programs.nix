@@ -52,6 +52,7 @@
       gimagereader
 
       # General
+      brave
       obsidian
       super-productivity
       calibre
