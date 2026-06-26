@@ -31,6 +31,18 @@
     };
     boot.loader.efi.canTouchEfiVariables = true;
 
+    # Entrada de arranque de Fedora
+    boot.loader.grub.extraEntries = ''
+      menuentry "Fedora KDE" {
+        insmod part_gpt
+        insmod fat
+        insmod search_fs_uuid
+        insmod chain
+        search --fs-uuid --set=root 11C8-1714
+        chainloader /EFI/fedora/shimx64.efi
+      }
+    '';
+
     # Distribución de teclado (en X11)
     services.xserver.xkb = {
       layout = "us";
