@@ -53,6 +53,7 @@
 
       # General
       obsidian
+      super-productivity
       calibre
       qalculate-gtk
 
