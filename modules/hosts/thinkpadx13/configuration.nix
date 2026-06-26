@@ -20,11 +20,14 @@
     # ===================== Boot / Hardare =====================
 
     # Bootloader.
-    boot.loader.grub = {
-      enable = true;
-      device = "nodev";
-      efiSupport = true;
-      # configurationLimit = 3; # cuántas generaciones mostrar
+    boot.loader = {
+      grub = {
+        enable = true;
+        device = "nodev";
+        efiSupport = true;
+        # configurationLimit = 3; # cuántas generaciones mostrar
+      };
+      timeout = 3; # segundos
     };
     boot.loader.efi.canTouchEfiVariables = true;
 
