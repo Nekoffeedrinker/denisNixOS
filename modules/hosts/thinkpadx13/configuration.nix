@@ -26,6 +26,7 @@
         device = "nodev";
         efiSupport = true;
         # configurationLimit = 3; # cuántas generaciones mostrar
+        default = "saved"; # Selecciona la opción del último arranque
       };
       timeout = 3; # segundos
     };
@@ -38,6 +39,7 @@
         insmod fat
         insmod search_fs_uuid
         insmod chain
+        savedefault
         search --fs-uuid --set=root 11C8-1714
         chainloader /EFI/fedora/shimx64.efi
       }
