@@ -7,6 +7,10 @@
 
     # ===================== Paquetes / Programas =====================
 
+    # Activar fish shell
+    programs.fish.enable = true;
+    users.defaultUserShell = pkgs.fish;
+
     # Paquetes en Nixpkgs
     environment.systemPackages = with pkgs; [
       wget
