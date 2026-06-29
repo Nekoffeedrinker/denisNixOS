@@ -3,11 +3,7 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.wslConfiguration = {
-    pkgs,
-    mainUser,
-    ...
-  }: {
+  flake.nixosModules.wslConfiguration = {mainUser, ...}: {
     imports = [
       inputs.nixos-wsl.nixosModules.default
       self.nixosModules.wslPrograms
@@ -25,7 +21,7 @@
 
     # Ubicación del flake (necesario para nh)
     environment.sessionVariables = {
-      NH_FLAKE = "/home/denis/denisNixOS/";
+      NH_FLAKE = "/home/${mainUser}/denisNixOS/";
     };
 
     # ===================== Usuarios =====================
