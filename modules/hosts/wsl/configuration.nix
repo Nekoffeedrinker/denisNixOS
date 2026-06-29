@@ -28,6 +28,16 @@
       NH_FLAKE = "/home/denis/denisNixOS/";
     };
 
+    # ===================== Usuarios =====================
+
+    # Definir una cuenta de usuario.
+    users.users.${mainUser} = {
+      isNormalUser = true;
+      description = "Denis Pilar";
+      extraGroups = ["wheel"];
+      initialPassword = "1234"; # Cámbiala con ‘passwd’.
+    };
+
     # ===================== Configuración de NixOS-WSL =====================
 
     # Edit this configuration file to define what should be installed on
@@ -38,7 +48,7 @@
     # https://github.com/nix-community/NixOS-WSL
 
     wsl.enable = true;
-    wsl.defaultUser = "nixos";
+    wsl.defaultUser = mainUser;
 
     # This value determines the NixOS release from which the default
     # settings for stateful data, like file locations and database versions
