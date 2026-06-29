@@ -12,7 +12,7 @@
       self.nixosModules.indispensable
       # === Entorno de escritorio ===
       # self.nixosModules.KdePlasma
-      self.nixosModules.gnome
+      # self.nixosModules.gnome
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -64,7 +64,10 @@
     # services.displayManager.sddm.enable = true;
 
     # Habilitar GDM (Genome Display Manager)
-    services.displayManager.gdm.enable = true;
+    # services.displayManager.gdm.enable = true;
+
+    services.xserver.displayManager.lightdm.enable = true;
+    services.xserver.desktopManager.cinnamon.enable = true;
 
     # ===================== Paquetes / Programas =====================
 
