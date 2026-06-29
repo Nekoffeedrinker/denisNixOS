@@ -10,6 +10,10 @@
       fzf # para usar fzf-tab en zsh
       bat # cat mejorado
       eza # ls mejorado
+      lazygit
+      (yazi.override {
+        _7zz = _7zz-rar;
+      })
     ];
   };
 }
