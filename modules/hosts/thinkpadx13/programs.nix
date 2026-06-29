@@ -46,6 +46,7 @@
 
       # Herramientas Gui
       gparted
+      pix #visor de imágenes
       font-manager
       mission-center
       easyeffects
