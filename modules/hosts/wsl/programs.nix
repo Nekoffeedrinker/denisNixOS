@@ -1,14 +1,14 @@
 {self, ...}: {
   flake.nixosModules.wslPrograms = {pkgs, ...}: {
     imports = [
-      self.nixosModules.nixUtil
       # self.nixosModules.flatpak
+      self.nixosModules.nixUtil
+      self.nixosModules.fishShell
     ];
 
     # ===================== Paquetes / Programas =====================
 
-    # Activar fish shell
-    programs.fish.enable = true;
+    # Establecer la shell por defecto
     users.defaultUserShell = pkgs.fish;
 
     # Paquetes en Nixpkgs
