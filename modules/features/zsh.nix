@@ -2,7 +2,6 @@
   flake.nixosModules.zsh = {pkgs, ...}: {
     # Habilitar Zsh
     programs.zsh.enable = true;
-    users.defaultUserShell = pkgs.zsh;
 
     # Dependencias
     environment.systemPackages = with pkgs; [

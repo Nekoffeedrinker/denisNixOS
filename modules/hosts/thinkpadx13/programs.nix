@@ -17,6 +17,9 @@
 
     # ===================== Paquetes / Programas =====================
 
+    # Establecer la shell por defecto
+    users.defaultUserShell = pkgs.zsh;
+
     # Habilitar paquetes no libres (no Open Source)
     nixpkgs.config.allowUnfree = true;
 

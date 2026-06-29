@@ -9,6 +9,9 @@
 
     # ===================== Paquetes / Programas =====================
 
+    # Establecer la shell por defecto
+    users.defaultUserShell = pkgs.zsh;
+
     # Paquetes en Nixpkgs
     environment.systemPackages = with pkgs; [
       kitty
