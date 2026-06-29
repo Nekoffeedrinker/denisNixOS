@@ -87,7 +87,7 @@
 
     # Ubicación del flake (necesario para nh)
     environment.sessionVariables = {
-      NH_FLAKE = "/home/denis/denisNixOS/";
+      NH_FLAKE = "/home/${mainUser}/denisNixOS/";
     };
 
     # ===================== Usuarios =====================
