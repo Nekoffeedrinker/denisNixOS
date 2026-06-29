@@ -19,7 +19,7 @@
     # ===================== Paquetes / Programas =====================
 
     # Establecer la shell por defecto
-    users.defaultUserShell = pkgs.zsh;
+    users.defaultUserShell = pkgs.fish;
 
     # Instalar LocalSend
     programs.localsend.enable = true;
