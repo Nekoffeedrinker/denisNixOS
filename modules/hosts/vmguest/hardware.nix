@@ -1,6 +1,5 @@
 {
   flake.nixosModules.vmguestHardware = {
-    config,
     lib,
     modulesPath,
     ...
@@ -15,7 +14,7 @@
     boot.extraModulePackages = [];
 
     fileSystems."/" = {
-      device = "/dev/disk/by-uuid/2a477f79-a0d0-477a-869d-6db5569b4d60";
+      device = "/dev/disk/by-uuid/9ca88829-2173-4ae0-b9aa-dac7d5e6b778";
       fsType = "ext4";
     };
 
