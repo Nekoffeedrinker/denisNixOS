@@ -1,5 +1,9 @@
 {self, ...}: {
-  flake.nixosModules.thinkpadx13Configuration = {mainUser, ...}: {
+  flake.nixosModules.thinkpadx13Configuration = {
+    pkgs,
+    mainUser,
+    ...
+  }: {
     # Importar otros módulos
     imports = [
       # /etc/nixos/hardware-configuration.nix
@@ -110,6 +114,15 @@
 
     # Habilitar GDM (Genome Display Manager)
     services.displayManager.gdm.enable = true;
+
+    # ===================== Paquetes / Programas =====================
+
+    # Habilitar paquetes no libres (no Open Source)
+    nixpkgs.config.allowUnfree = true;
+
+    environment.systemPackages = with pkgs; [
+      nvtopPackages.intel # monitor de la gráfica
+    ];
 
     # ===================== Servicios =====================
 

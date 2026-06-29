@@ -20,9 +20,6 @@
     # Establecer la shell por defecto
     users.defaultUserShell = pkgs.zsh;
 
-    # Habilitar paquetes no libres (no Open Source)
-    nixpkgs.config.allowUnfree = true;
-
     # Instalar LocalSend
     programs.localsend.enable = true;
 
@@ -36,7 +33,6 @@
       fzf # búsqueda chida
       usbutils # trabajar con USB
       ncdu # analizar el espacio en disco
-      nvtopPackages.intel # monitor de la gráfica
 
       # Terminal divertida
       cbonsai # arbol bonsai
