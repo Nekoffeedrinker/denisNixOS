@@ -40,6 +40,7 @@
       bat # cat mejorado
       fd # find mejorado
       ripgrep # grep mejorado (se usa `rg`)
+      tmux
 
       # Está bien tenerlas
       fastfetch
