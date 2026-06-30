@@ -1,9 +1,5 @@
 {self, ...}: {
-  flake.nixosModules.vmguestConfiguration = {
-    pkgs,
-    mainUser,
-    ...
-  }: {
+  flake.nixosModules.vmguestConfiguration = {mainUser, ...}: {
     # Importar otros módulos
     imports = [
       # /etc/nixos/hardware-configuration.nix
@@ -66,12 +62,6 @@
 
     services.xserver.displayManager.lightdm.enable = true;
     services.xserver.desktopManager.cinnamon.enable = true;
-
-    # ===================== Paquetes / Programas =====================
-
-    environment.systemPackages = with pkgs; [
-      spice-vdagent
-    ];
 
     # ===================== Invitado de Maquina virtual =====================
 

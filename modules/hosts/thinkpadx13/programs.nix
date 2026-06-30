@@ -26,6 +26,7 @@
 
     # Paquetes en Nixpkgs
     environment.systemPackages = with pkgs; [
+      nvtopPackages.intel # monitor de la gráfica
       flameshot # capturas de pantalla
 
       # Herramientas de terminal

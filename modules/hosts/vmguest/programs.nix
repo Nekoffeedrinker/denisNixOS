@@ -14,6 +14,7 @@
 
     # Paquetes en Nixpkgs
     environment.systemPackages = with pkgs; [
+      spice-vdagent # Cosas de maquina virutal
       kitty
     ];
 
