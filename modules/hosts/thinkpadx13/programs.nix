@@ -34,16 +34,6 @@
       opencode
       fzf # búsqueda chida
       usbutils # trabajar con USB
-      ncdu # analizar el espacio en disco
-
-      # Terminal divertida
-      cbonsai # arbol bonsai
-      cmatrix # caracteres cayendo en cascada
-      fortune-kind # como una galleta china
-      sl # steam locomotive
-      # Arte ASCII
-      figlet # escrito en letras grandes
-      cowsay # una vaca diciendo cosas
 
       # Herramientas Gui
       gparted
