@@ -8,6 +8,10 @@
       # -- de la config --
       starship
 
+      # -- mejoras --
+      zoxide
+      fzf
+
       # -- de los alias --
       bat # cat mejorado
       eza # ls mejorado
