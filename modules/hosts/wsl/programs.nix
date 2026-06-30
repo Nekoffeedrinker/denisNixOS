@@ -2,7 +2,6 @@
   flake.nixosModules.wslPrograms = {pkgs, ...}: {
     imports = [
       # self.nixosModules.flatpak
-      self.nixosModules.nixUtil
       self.nixosModules.fishShell
     ];
 

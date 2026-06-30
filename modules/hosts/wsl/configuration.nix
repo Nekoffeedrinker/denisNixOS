@@ -7,6 +7,7 @@
     imports = [
       inputs.nixos-wsl.nixosModules.default
       self.nixosModules.wslPrograms
+      self.nixosModules.indispensable
     ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];

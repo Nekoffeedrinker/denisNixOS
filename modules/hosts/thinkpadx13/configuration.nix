@@ -9,7 +9,7 @@
       # /etc/nixos/hardware-configuration.nix
       self.nixosModules.thinkpadx13Hardware
       self.nixosModules.thinkpadx13Programs
-      self.nixosModules.indispensable
+      self.nixosModules.basicPC
       # === Entorno de escritorio ===
       self.nixosModules.gnome
       self.nixosModules.niri

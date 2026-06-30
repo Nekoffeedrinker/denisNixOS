@@ -9,7 +9,7 @@
       # /etc/nixos/hardware-configuration.nix
       self.nixosModules.vmguestHardware
       self.nixosModules.vmguestPrograms
-      self.nixosModules.indispensable
+      self.nixosModules.basicPC
       # === Entorno de escritorio ===
       # self.nixosModules.KdePlasma
       # self.nixosModules.gnome
