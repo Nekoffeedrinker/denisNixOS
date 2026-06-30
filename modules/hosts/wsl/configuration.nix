@@ -10,11 +10,6 @@
       self.nixosModules.indispensable
     ];
 
-    nix.settings.experimental-features = ["nix-command" "flakes"];
-
-    # Habilitar paquetes no libres (no Open Source)
-    nixpkgs.config.allowUnfree = true;
-
     # ===================== Nombres y rutas =====================
 
     # Nombre de la máquina

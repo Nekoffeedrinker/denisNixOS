@@ -19,8 +19,6 @@
       self.nixosModules.noctaliaBatThresh
     ];
 
-    nix.settings.experimental-features = ["nix-command" "flakes"];
-
     # ===================== Boot / Hardare =====================
 
     # Bootloader.
@@ -116,9 +114,6 @@
     services.displayManager.gdm.enable = true;
 
     # ===================== Paquetes / Programas =====================
-
-    # Habilitar paquetes no libres (no Open Source)
-    nixpkgs.config.allowUnfree = true;
 
     environment.systemPackages = with pkgs; [
       nvtopPackages.intel # monitor de la gráfica

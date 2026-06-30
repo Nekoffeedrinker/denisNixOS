@@ -7,6 +7,8 @@
       self.nixosModules.nixUtil
     ];
 
+    # Activar Flakes
+    nix.settings.experimental-features = ["nix-command" "flakes"];
 
     # =============== Seguridad ===============
 
@@ -16,6 +18,9 @@
     '';
 
     # =============== Paquetes ===============
+
+    # Habilitar paquetes no libres (no Open Source)
+    nixpkgs.config.allowUnfree = true;
 
     # Paquetes en Nixpkgs
     environment.systemPackages = with pkgs; [

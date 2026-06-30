@@ -15,8 +15,6 @@
       # self.nixosModules.gnome
     ];
 
-    nix.settings.experimental-features = ["nix-command" "flakes"];
-
     # ===================== Boot / Hardare =====================
 
     # Bootloader.
@@ -70,9 +68,6 @@
     services.xserver.desktopManager.cinnamon.enable = true;
 
     # ===================== Paquetes / Programas =====================
-
-    # Allow unfree packages
-    nixpkgs.config.allowUnfree = true;
 
     environment.systemPackages = with pkgs; [
       spice-vdagent
