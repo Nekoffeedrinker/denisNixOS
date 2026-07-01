@@ -2,7 +2,7 @@
   flake.nixosModules.vmguestPrograms = {pkgs, ...}: {
     imports = [
       self.nixosModules.flatpak
-      self.nixosModules.zsh
+      self.nixosModules.fishShell
       # === Aplicaciones ===
       # self.nixosModules.doomEmacs
     ];
