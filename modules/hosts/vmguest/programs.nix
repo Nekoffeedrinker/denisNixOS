@@ -10,7 +10,7 @@
     # ===================== Paquetes / Programas =====================
 
     # Establecer la shell por defecto
-    users.defaultUserShell = pkgs.zsh;
+    users.defaultUserShell = pkgs.fish;
 
     # Paquetes en Nixpkgs
     environment.systemPackages = with pkgs; [
