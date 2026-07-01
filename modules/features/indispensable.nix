@@ -41,6 +41,7 @@
       fd # find mejorado
       ripgrep # grep mejorado (se usa `rg`)
       tmux
+      tldr
 
       # Está bien tenerlas
       fastfetch
