@@ -39,5 +39,12 @@
     environment.variables = {
       PATH = ["$HOME/.config/emacs/bin"];
     };
+
+    # Activar demonio de emacs
+    services.emacs = {
+      enable = true;
+      package = pkgs.emacs;
+      defaultEditor = false;
+    };
   };
 }
