@@ -37,11 +37,11 @@
 
       # Herramientas Gui
       gparted
-      pix #visor de imágenes
       font-manager
       mission-center
       easyeffects
-      gimagereader
+      gimagereader # gui para tesseract-ocr
+      pix #visor de imágenes
 
       # General
       brave
@@ -107,6 +107,7 @@
 
         # General
         "app.zen_browser.zen"
+        "org.gnome.gitlab.somas.Apostrophe"
         # "io.github.nokse22.asciidraw"
 
         # Audio
