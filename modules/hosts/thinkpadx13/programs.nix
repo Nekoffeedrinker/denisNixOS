@@ -107,6 +107,7 @@
 
         # General
         "app.zen_browser.zen"
+        "com.bitwarden.desktop"
         "org.gnome.gitlab.somas.Apostrophe"
         # "io.github.nokse22.asciidraw"
 
