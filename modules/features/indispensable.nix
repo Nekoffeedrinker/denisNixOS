@@ -5,6 +5,7 @@
     # Importar otros archivos
     imports = [
       self.nixosModules.nixUtil
+      self.nixosModules.kanata
     ];
 
     # Activar Flakes
@@ -27,7 +28,6 @@
       wget
 
       # Minimo indispensable
-      kanata
       neovim
       stow
       git

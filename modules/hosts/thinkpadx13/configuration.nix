@@ -50,6 +50,11 @@
       options = "caps:escape_shifted_capslock";
     };
 
+    # Kanata
+    services.kanata.keyboards.internalKeyboard.devices = [
+      "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
+    ];
+
     # Touchpad
     services.libinput.enable = true;
 
