@@ -32,14 +32,14 @@
 
     # Entrada de arranque de Fedora
     boot.loader.grub.extraEntries = ''
-      menuentry "Fedora KDE" {
+      menuentry "Kubuntu" {
         insmod part_gpt
         insmod fat
         insmod search_fs_uuid
         insmod chain
         savedefault
         search --fs-uuid --set=root 11C8-1714
-        chainloader /EFI/fedora/shimx64.efi
+        chainloader /EFI/ubuntu/shimx64.efi
       }
     '';
 
