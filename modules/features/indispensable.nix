@@ -27,6 +27,7 @@
       wget
 
       # Minimo indispensable
+      kanata
       neovim
       stow
       git
