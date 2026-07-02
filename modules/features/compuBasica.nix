@@ -5,6 +5,7 @@
     # Importar otros archivos
     imports = [
       self.nixosModules.indispensable
+      self.nixosModules.kanata
     ];
 
     # =============== Localización ===============
