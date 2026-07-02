@@ -1,4 +1,4 @@
-{
+{...}: {
   flake.nixosModules.virtManager = {
     pkgs,
     mainUser,

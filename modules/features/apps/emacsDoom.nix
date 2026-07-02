@@ -1,4 +1,4 @@
-{
+{...}: {
   flake.nixosModules.doomEmacs = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       emacs
