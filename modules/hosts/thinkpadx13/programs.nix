@@ -128,12 +128,20 @@
       ++ [
         rec {
           appId = "dk.nikse.subtitleedit";
-          sha256 = "6d8e584074bf1aec68eedb65e3c119f3545f2daeb3105367fd5a5db7e694656b";
+          sha256 = "0s7f34f4y2c2frs348yaf7x0694rrn9w03p86yr6gs32rkk82qzd";
           bundle = "${pkgs.fetchurl {
-            url = "https://github.com/SubtitleEdit/subtitleedit/releases/download/v5.0.0-beta24/SubtitleEdit-linux-x64.flatpak";
+            url = "https://github.com/SubtitleEdit/subtitleedit/releases/download/v5.0.0/SubtitleEdit-linux-x64.flatpak";
             inherit sha256;
           }}";
         }
+
+        ## Para obtener el hash sha256, ejecuta `nix-prefetch-url` y la url del
+        ## flatpak en cuestión, lo que devolverá el path y hash correspondiente.
+        ## Ejemplo:
+        ##
+        ## ❯ nix-prefetch-url https://github.com/SubtitleEdit/subtitleedit/releases/download/v5.0.0/SubtitleEdit-linux-x64.flatpak
+        ## path is '/nix/store/96hb35gvipy3l0vailpyw78niimcxrwa-SubtitleEdit-linux-x64.flatpak'
+        ## 0s7f34f4y2c2frs348yaf7x0694rrn9w03p86yr6gs32rkk82qzd
       ];
 
     # Some programs need SUID wrappers, can be configured further or are
