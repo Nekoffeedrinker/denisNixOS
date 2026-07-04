@@ -30,7 +30,7 @@
     };
     boot.loader.efi.canTouchEfiVariables = true;
 
-    # Entrada de arranque de Fedora
+    # Entrada de arranque de Kubuntu
     boot.loader.grub.extraEntries = ''
       menuentry "Kubuntu" {
         insmod part_gpt
