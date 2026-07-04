@@ -48,6 +48,7 @@
       hyfetch # pride fetch
       btop # monitor de recursos
       ncdu # analizar el espacio en disco
+      jrnl # escribir un diario en la terminal
 
       # Terminal divertida
       cbonsai # arbol bonsai
