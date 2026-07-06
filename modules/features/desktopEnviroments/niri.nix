@@ -19,6 +19,10 @@
     services.playerctld.enable = true;
 
     environment.systemPackages = [
+      # App para que algunas apps flotantes sigan
+      # el espacio de trabajo actual.
+      inputs.niri-float-sticky.packages.${pkgs.stdenv.hostPlatform.system}.default
+
       # Controlar el brillo del monitor
       pkgs.brightnessctl
 
@@ -29,9 +33,14 @@
       pkgs.adwaita-icon-theme
       pkgs.hicolor-icon-theme
 
-      # App para que algunas apps flotantes sigan
-      # el espacio de trabajo actual.
-      inputs.niri-float-sticky.packages.${pkgs.stdenv.hostPlatform.system}.default
+      # QT
+      pkgs.kdePackages.breeze
+      pkgs.qt6Packages.qt6ct
+      pkgs.libsForQt5.qt5ct
     ];
+
+    environment.variables = {
+      QT_QPA_PLATFORMTHEME = "qt6ct";
+    };
   };
 }
