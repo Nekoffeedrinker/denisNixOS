@@ -39,6 +39,7 @@
       font-manager
       mission-center
       easyeffects
+      gitte # cliente GUI de git
 
       # General
       brave
@@ -121,6 +122,7 @@
         "app.zen_browser.zen"
         "com.bitwarden.desktop"
         "org.gnome.gitlab.somas.Apostrophe"
+        "com.mardojai.DiccionarioLengua"
         "io.github.diegopvlk.Tomatillo"
         # "io.github.nokse22.asciidraw"
 
