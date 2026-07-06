@@ -13,7 +13,6 @@
       # === Juegos ===
       self.nixosModules.miniJuegos
       self.nixosModules.steam
-      self.nixosModules.minecraft
     ];
 
     # ===================== Paquetes / Programas =====================
@@ -102,6 +101,9 @@
 
       # Teatro
       qlcplus
+
+      # Juegos
+      prismlauncher # Minecraft
     ];
 
     # Paquetes en Flathub
