@@ -1,5 +1,9 @@
 {self, ...}: {
-  flake.nixosModules.thinkpadx13Programs = {pkgs, ...}: {
+  flake.nixosModules.thinkpadx13Programs = {
+    pkgs,
+    pkgs-stable,
+    ...
+  }: {
     imports = [
       self.nixosModules.flatpak
       self.nixosModules.zsh
@@ -53,7 +57,7 @@
       pix #visor de imágenes
       gimagereader # gui para tesseract-ocr
       identity # comparar imágenes/videos
-      czkawka # búsqueda de archivos duplicados
+      pkgs-stable.czkawka # búsqueda de archivos duplicados
 
       # Real Life
       zapzap
