@@ -46,7 +46,8 @@
       # Está bien tenerlas
       fastfetch
       hyfetch # pride fetch
-      btop # monitor de recursos
+      htop # monitor de recursos
+      btop # monitor de recursos más bonito
       ncdu # analizar el espacio en disco
       jrnl # escribir un diario en la terminal
 
