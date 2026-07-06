@@ -1,13 +1,17 @@
 {inputs, ...}: {
-  flake.nixosModules.davinciResolveIntel = {pkgs, ...}: let
+  flake.nixosModules.davinciResolveIntel = {...}: let
     pkgs-igc-fix = import inputs.nixpkgs-igc-fix {
+      system = "x86_64-linux";
+      config.allowUnfree = true;
+    };
+    pkgs-davinci-pin = import inputs.nixpkgs-davinci2033 {
       system = "x86_64-linux";
       config.allowUnfree = true;
     };
   in {
     # instalar davinci
-    environment.systemPackages = with pkgs; [
-      davinci-resolve
+    environment.systemPackages = [
+      pkgs-davinci-pin.davinci-resolve
     ];
 
     # Requerir gráficos

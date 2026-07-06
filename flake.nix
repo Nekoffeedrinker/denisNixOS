@@ -45,6 +45,9 @@
     # Commit en el que funciona intel-compute-runtime-legacy para mi ThinkPad X13 gen 2.
     # Es un paquete gráfico de las GPU intel que es necesario para Davinci Resolve.
     nixpkgs-igc-fix.url = "github:nixos/nixpkgs/0c3fc1cd3494aa52a2c111d5f18a7689fd15ab83";
+
+    # Coommit en el que Davinci Resolve está en la versión 20.3.3
+    nixpkgs-davinci2033.url = "github:nixos/nixpkgs/586b979a8ccb8f35d5fe06645dd678a8b343f16f";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
