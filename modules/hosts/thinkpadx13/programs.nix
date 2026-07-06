@@ -63,6 +63,7 @@
       zapzap
       spotify
       blanket # reproducir sonidos ambientales
+      shortwave # Sintonizar radios de internet
 
       # Ofimática
       typst
