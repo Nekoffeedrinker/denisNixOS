@@ -40,15 +40,20 @@
       font-manager
       mission-center
       easyeffects
-      gimagereader # gui para tesseract-ocr
-      pix #visor de imágenes
 
       # General
       brave
       obsidian
       super-productivity
       calibre
+      foliate # eBook reader
+      komikku # Manga reader
       qalculate-gtk
+      dialect # Traductor de texto
+      pix #visor de imágenes
+      gimagereader # gui para tesseract-ocr
+      identity # comparar imágenes/videos
+      czkawka # búsqueda de archivos duplicados
 
       # Real Life
       zapzap
@@ -67,6 +72,7 @@
       # Código
       vscode
       meld
+      lorem # generador de texto provisional
 
       # Elecrónica
       arduino-cli
@@ -77,6 +83,7 @@
       pwvucontrol # volumen e interfaces de audio
       crosspipe # Rutear el audio
       ardour
+      eartag # Editar metadatos
 
       # Video
       kdePackages.kdenlive
@@ -87,9 +94,11 @@
       inkscape
       # gimp
       # scribus
-      eyedropper # Obtener un color
       switcheroo # Convertir archivos de imagen
       upscayl # Escalar imágenes
+      eyedropper # Obtener un color
+      paleta # Paleta de colores de una imágen
+      contrast # checar contraste entre colores
 
       # Teatro
       qlcplus
@@ -109,6 +118,7 @@
         "app.zen_browser.zen"
         "com.bitwarden.desktop"
         "org.gnome.gitlab.somas.Apostrophe"
+        "io.github.diegopvlk.Tomatillo"
         # "io.github.nokse22.asciidraw"
 
         # Audio
