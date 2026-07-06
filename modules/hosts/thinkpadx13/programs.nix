@@ -104,6 +104,7 @@
 
       # Juegos
       prismlauncher # Minecraft
+      dolphin-emu
     ];
 
     # Paquetes en Flathub
