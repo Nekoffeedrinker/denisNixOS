@@ -128,7 +128,7 @@
         "com.bitwarden.desktop"
         "org.gnome.gitlab.somas.Apostrophe"
         "com.mardojai.DiccionarioLengua"
-        "io.github.diegopvlk.Tomatillo"
+        "io.github.focustimerhq.FocusTimer"
         # "io.github.nokse22.asciidraw"
 
         # Audio
