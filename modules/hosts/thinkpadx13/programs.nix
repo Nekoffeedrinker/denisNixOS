@@ -56,7 +56,6 @@
         easyeffects
 
         # General
-        brave
         obsidian
         super-productivity
         calibre
@@ -141,6 +140,7 @@
 
         # General
         "app.zen_browser.zen"
+        "com.brave.Browser"
         "com.bitwarden.desktop"
         "org.gnome.gitlab.somas.Apostrophe"
         "com.mardojai.DiccionarioLengua"
