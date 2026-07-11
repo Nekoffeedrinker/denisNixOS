@@ -6,7 +6,7 @@
       self.nixosModules.thinkpadx13Programs
       self.nixosModules.basicPC
       # === Entorno de escritorio ===
-      self.nixosModules.gnome
+      self.nixosModules.cinnamon
       self.nixosModules.niri
       # self.nixosModules.mango
       # self.nixosModules.denisDMS
@@ -108,9 +108,8 @@
     # Habilitar el sistema de ventanas X11
     services.xserver.enable = true;
 
-    # Habilitar GDM (Genome Display Manager)
-    services.displayManager.gdm.enable = true;
-
+    # Display Manager de Cinnamon
+    services.xserver.displayManager.lightdm.enable = true;
 
     # ===================== Sistem state version =====================
 
