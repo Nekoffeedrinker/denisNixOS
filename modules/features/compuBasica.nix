@@ -6,6 +6,7 @@
     imports = [
       self.nixosModules.indispensable
       self.nixosModules.kanata
+      self.nixosModules.flatpak
     ];
 
     # =============== Localización ===============
@@ -39,8 +40,12 @@
 
     # =============== Paquetes ===============
 
-    # Instalar firefox.
-    programs.firefox.enable = true;
+    services.flatpak.packages = [
+      {
+        appId = "org.mozilla.firefox";
+        origin = "flathub";
+      }
+    ];
 
     # Tipografías
     fonts.packages = with pkgs; [
