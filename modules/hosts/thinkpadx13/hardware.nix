@@ -15,7 +15,7 @@
     boot.extraModulePackages = [];
 
     fileSystems."/" = {
-      device = "/dev/disk/by-uuid/40a8a1b7-5b7d-4146-8d66-063c0d3270bf";
+      device = "/dev/disk/by-uuid/45d2849a-87fe-4949-8735-805926cbd2b9";
       fsType = "ext4";
     };
 
@@ -31,8 +31,8 @@
         size = 20480;
       }
     ];
-    boot.resumeDevice = "/dev/nvme0n1p4";
-    boot.kernelParams = ["resume_offset=170840064"];
+    boot.resumeDevice = "/dev/nvme0n1p3";
+    boot.kernelParams = ["resume_offset=138817536"];
 
     nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
     hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
