@@ -171,5 +171,32 @@
     #   enable = true;
     #   enableSSHSupport = true;
     # };
+
+    # ===================== Servicios =====================
+
+    # Habilitar Tailscale
+    services.tailscale.enable = true;
+
+    # Iniciar Syncthing
+    services.syncthing = {
+      enable = true;
+      openDefaultPorts = true;
+      user = "denis";
+      group = "users";
+      dataDir = "/home/denis/Syncthing"; # Default folder for new synced folders
+      configDir = "/home/denis/.local/state/syncthing"; # Folder for Syncthing's settings and keys
+      extraFlags = ["--allow-newer-config"];
+    };
+
+    # List services that you want to enable:
+
+    # Enable the OpenSSH daemon.
+    # services.openssh.enable = true;
+
+    # Open ports in the firewall.
+    # networking.firewall.allowedTCPPorts = [ ... ];
+    # networking.firewall.allowedUDPPorts = [ ... ];
+    # Or disable the firewall altogether.
+    # networking.firewall.enable = false;
   };
 }
