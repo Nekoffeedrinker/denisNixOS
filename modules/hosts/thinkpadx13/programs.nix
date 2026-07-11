@@ -6,7 +6,6 @@
   }: {
     imports = [
       self.nixosModules.flatpak
-      self.nixosModules.zsh
       self.nixosModules.fishShell
       # === Aplicaciones ===
       self.nixosModules.heliumBrowser
