@@ -1,6 +1,5 @@
 {self, ...}: {
   flake.nixosModules.thinkpadx13Configuration = {mainUser, ...}: {
-    # Importar otros módulos
     imports = [
       # /etc/nixos/hardware-configuration.nix
       self.nixosModules.thinkpadx13Hardware
@@ -15,7 +14,7 @@
       self.nixosModules.noctaliaBatThresh
     ];
 
-    # ===================== Boot / Hardare =====================
+    # ===================== Boot =====================
 
     # Bootloader.
     boot.loader = {
@@ -43,6 +42,16 @@
       }
     '';
 
+    # ===================== Puntos de montaje =====================
+
+    fileSystems."/mnt/Archivos" = {
+      device = "/dev/disk/by-uuid/ec46e7cc-12e7-4e3e-b0f5-fa2876ba2717";
+      fsType = "ext4";
+      options = ["defaults" "noatime" "nofail" "x-gvfs-show"];
+    };
+
+    # ===================== Hardare =====================
+
     # Distribución de teclado (en X11)
     services.xserver.xkb = {
       layout = "us";
@@ -55,7 +64,7 @@
       "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
     ];
 
-    # Touchpad
+    # Soporte para touchpad (activado por defecto en muchos desktopManager).
     services.libinput.enable = true;
 
     # Habilitar lector de huellas
@@ -65,22 +74,14 @@
     services.power-profiles-daemon.enable = true;
     services.upower.enable = true;
 
+    # Soporte para redes inalambricas meidante wpa_supplicant
+    networking.wireless.enable = true;
+
     # Bluetooth
     hardware.bluetooth.enable = true;
 
-    # Wifi
-    networking.wireless.enable = true;
-
     # Imprimir documentos usando CUPS
     services.printing.enable = true;
-
-    # ===================== Puntos de montaje =====================
-
-    fileSystems."/mnt/Archivos" = {
-      device = "/dev/disk/by-uuid/ec46e7cc-12e7-4e3e-b0f5-fa2876ba2717";
-      fsType = "ext4";
-      options = ["defaults" "noatime" "nofail" "x-gvfs-show"];
-    };
 
     # ===================== Nombres y rutas =====================
 
@@ -94,15 +95,12 @@
 
     # ===================== Usuarios =====================
 
-    # Define a user account. Don't forget to set a password with ‘passwd’.
+    # Definir una cuenta de usuario y contraseña inicial.
     users.users.${mainUser} = {
       isNormalUser = true;
       description = "Denis Pilar";
       extraGroups = ["networkmanager" "wheel"];
-      initialPassword = "1234"; # solo para testing
-      # packages = with pkgs; [
-      #   #  añadir paquetes solo para el usuario
-      # ];
+      initialPassword = "1234"; # cámbiala con 'passwd'
     };
 
     # ===================== Entorno de escritorio =====================
