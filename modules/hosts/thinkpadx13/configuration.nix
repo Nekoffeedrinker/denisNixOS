@@ -8,8 +8,6 @@
       # === Entorno de escritorio ===
       self.nixosModules.cinnamon
       self.nixosModules.niri
-      # self.nixosModules.mango
-      # self.nixosModules.denisDMS
       self.nixosModules.noctalia
       self.nixosModules.noctaliaBatThresh
     ];
