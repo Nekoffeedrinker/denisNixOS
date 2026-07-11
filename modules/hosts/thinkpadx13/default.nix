@@ -6,7 +6,7 @@
   flake.nixosConfigurations.thinkpadx13 = inputs.nixpkgs.lib.nixosSystem {
     # Valores reutilizables entre módulos
     specialArgs = {
-      pkgs-stable = import inputs.nixpkgs-estable {
+      pkgs-unstable = import inputs.nixpkgs-inestable {
         system = "x86_64-linux";
       };
       mainUser = "denis";

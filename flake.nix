@@ -1,7 +1,7 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-estable.url = "github:nixos/nixpkgs/nixos-26.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+    nixpkgs-inestable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
@@ -18,28 +18,28 @@
 
     mangowm = {
       url = "github:mangowm/mango";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-inestable";
     };
 
     dms = {
       url = "github:AvengeMedia/DankMaterialShell/stable";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-inestable";
     };
     dms-plugin-registry = {
       url = "github:AvengeMedia/dms-plugin-registry";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-inestable";
     };
 
     noctalia = {
       url = "github:noctalia-dev/noctalia/legacy-v4";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-inestable";
     };
 
     affinity-nix.url = "github:mrshmllow/affinity-nix";
 
     helium-flake = {
       url = "github:oxcl/nix-flake-helium-browser";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-inestable";
     };
 
     # Commit en el que funciona intel-compute-runtime-legacy para mi ThinkPad X13 gen 2.

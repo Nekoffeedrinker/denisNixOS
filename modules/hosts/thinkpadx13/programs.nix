@@ -1,7 +1,7 @@
 {self, ...}: {
   flake.nixosModules.thinkpadx13Programs = {
     pkgs,
-    pkgs-stable,
+    pkgs-unstable,
     ...
   }: {
     imports = [
@@ -19,99 +19,115 @@
       self.nixosModules.steam
     ];
 
-    # ===================== Paquetes / Programas =====================
-
     # Establecer la shell por defecto
     users.defaultUserShell = pkgs.fish;
+
+    # ===================== Overlays a inestable =====================
+
+    nixpkgs.overlays = [
+      (final: prev: {
+        localsend = pkgs-unstable.localsend;
+        tailscale = pkgs-unstable.tailscale;
+        syncthing = pkgs-unstable.syncthing;
+      })
+    ];
+
+    # ===================== Paquetes / Programas =====================
 
     # Instalar LocalSend
     programs.localsend.enable = true;
 
     # Paquetes en Nixpkgs
-    environment.systemPackages = with pkgs; [
-      nvtopPackages.intel # monitor de la gráfica
-      flameshot # capturas de pantalla
+    environment.systemPackages = with pkgs;
+      [
+        nvtopPackages.intel # monitor de la gráfica
+        flameshot # capturas de pantalla
 
-      # Herramientas de terminal
-      kitty
-      opencode
-      fzf # búsqueda chida
-      usbutils # trabajar con USB
+        # Herramientas de terminal
+        kitty
+        opencode
+        fzf # búsqueda chida
+        usbutils # trabajar con USB
 
-      # Herramientas Gui
-      gparted
-      font-manager
-      mission-center
-      easyeffects
-      gitte # cliente GUI de git
+        # Herramientas Gui
+        gparted
+        font-manager
+        mission-center
+        easyeffects
 
-      # General
-      brave
-      obsidian
-      super-productivity
-      calibre
-      foliate # eBook reader
-      komikku # Manga reader
-      qalculate-gtk
-      dialect # Traductor de texto
-      pix #visor de imágenes
-      gimagereader # gui para tesseract-ocr
-      identity # comparar imágenes/videos
-      pkgs-stable.czkawka # búsqueda de archivos duplicados
+        # General
+        brave
+        obsidian
+        super-productivity
+        calibre
+        foliate # eBook reader
+        komikku # Manga reader
+        qalculate-gtk
+        dialect # Traductor de texto
+        pix #visor de imágenes
+        gimagereader # gui para tesseract-ocr
+        identity # comparar imágenes/videos
+        czkawka # búsqueda de archivos duplicados
 
-      # Real Life
-      zapzap
-      spotify
-      blanket # reproducir sonidos ambientales
-      shortwave # Sintonizar radios de internet
+        # Real Life
+        zapzap
+        spotify
+        blanket # reproducir sonidos ambientales
+        shortwave # Sintonizar radios de internet
 
-      # Ofimática
-      typst
-      tinymist # LSP de typst
-      kdePackages.okular
-      pdfarranger
-      libreoffice
-      onlyoffice-desktopeditors
-      zotero
+        # Ofimática
+        typst
+        tinymist # LSP de typst
+        kdePackages.okular
+        pdfarranger
+        libreoffice
+        onlyoffice-desktopeditors
+        zotero
 
-      # Código
-      vscode
-      meld
-      lorem # generador de texto provisional
+        # Código
+        vscode
+        meld
+        lorem # generador de texto provisional
 
-      # Elecrónica
-      arduino-cli
-      kicad
-      # freecad
+        # Elecrónica
+        arduino-cli
+        kicad
+        # freecad
 
-      # Audio
-      pwvucontrol # volumen e interfaces de audio
-      crosspipe # Rutear el audio
-      ardour
-      eartag # Editar metadatos
+        # Audio
+        pwvucontrol # volumen e interfaces de audio
+        crosspipe # Rutear el audio
+        ardour
+        eartag # Editar metadatos
 
-      # Video
-      kdePackages.kdenlive
-      obs-studio
-      friction-graphics
+        # Video
+        kdePackages.kdenlive
+        obs-studio
+        friction-graphics
 
-      # Imagen
-      inkscape
-      # gimp
-      # scribus
-      switcheroo # Convertir archivos de imagen
-      upscayl # Escalar imágenes
-      eyedropper # Obtener un color
-      paleta # Paleta de colores de una imágen
-      contrast # checar contraste entre colores
+        # Imagen
+        inkscape
+        # gimp
+        # scribus
+        switcheroo # Convertir archivos de imagen
+        upscayl # Escalar imágenes
+        eyedropper # Obtener un color
+        paleta # Paleta de colores de una imágen
+        contrast # checar contraste entre colores
 
-      # Teatro
-      qlcplus
+        # Teatro
+        qlcplus
 
-      # Juegos
-      prismlauncher # Minecraft
-      dolphin-emu
-    ];
+        # Juegos
+        prismlauncher # Minecraft
+        dolphin-emu
+      ]
+      ++ (with pkgs-unstable; [
+        # --- Paquetes de inestable ---
+
+        gitte # cliente GUI de git
+        trayscale # GUI para Tailscale
+      ]);
 
     # Paquetes en Flathub
     services.flatpak.packages =
