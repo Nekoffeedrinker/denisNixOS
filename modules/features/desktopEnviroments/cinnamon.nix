@@ -18,6 +18,7 @@
       gnumake
       gcc
     ];
+    programs.kdeconnect.enable = true;
 
     # Clipboard manager
     programs.gpaste.enable = true;
