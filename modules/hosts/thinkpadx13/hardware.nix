@@ -25,12 +25,6 @@
       options = ["fmask=0077" "dmask=0077"];
     };
 
-    fileSystems."/mnt/Archivos" = {
-      device = "/dev/disk/by-uuid/ec46e7cc-12e7-4e3e-b0f5-fa2876ba2717";
-      fsType = "ext4";
-      options = ["defaults" "noatime" "nofail" "x-gvfs-show"];
-    };
-
     swapDevices = [
       {
         device = "/swapfile";

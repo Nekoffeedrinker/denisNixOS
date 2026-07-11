@@ -76,12 +76,11 @@
 
     # ===================== Puntos de montaje =====================
 
-    # Punto de montaje de mi carpeta Gatos
-    # fileSystems."/mnt/GATOS" = {
-    #   device = "/dev/disk/by-uuid/10d308dd-afc2-4647-99c7-6165285d6e7b";
-    #   fsType = "ext4";
-    #   options = ["defaults"];
-    # };
+    fileSystems."/mnt/Archivos" = {
+      device = "/dev/disk/by-uuid/ec46e7cc-12e7-4e3e-b0f5-fa2876ba2717";
+      fsType = "ext4";
+      options = ["defaults" "noatime" "nofail" "x-gvfs-show"];
+    };
 
     # ===================== Nombres y rutas =====================
 
