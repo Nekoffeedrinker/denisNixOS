@@ -3,6 +3,9 @@
     # Instalar el entorno de escritorio GNOME
     services.desktopManager.gnome.enable = true;
 
+    # # Display Manager de GNOME
+    # services.displayManager.gdm.enable = true;
+
     environment.gnome.excludePackages = with pkgs; [
       gnome-font-viewer # Tipografías
       gnome-connections # Conexiones
