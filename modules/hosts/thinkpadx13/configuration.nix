@@ -31,7 +31,7 @@
 
     # Entrada de arranque de Kubuntu
     boot.loader.grub.extraEntries = ''
-      menuentry "Kubuntu" {
+      menuentry "Zorin OS" {
         insmod part_gpt
         insmod fat
         insmod search_fs_uuid
