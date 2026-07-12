@@ -75,6 +75,7 @@
         shortwave # Sintonizar radios de internet
 
         # Ofimática
+        miktex
         typst
         tinymist # LSP de typst
         kdePackages.okular
