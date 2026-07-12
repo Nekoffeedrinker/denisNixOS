@@ -150,6 +150,7 @@
         # Audio
         # "org.audacityteam.Audacity"
         # "com.bitwig.BitwigStudio"
+        "org.musescore.MuseScore"
 
         # Video
         "no.mifi.losslesscut"
