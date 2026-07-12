@@ -47,6 +47,9 @@
       gnomeExtensions.status-tray
       gnomeExtensions.launch-new-instance
       gnomeExtensions.pip-on-top
+      gnomeExtensions.night-theme-switcher
+      gnomeExtensions.dash-to-panel
+      gnomeExtensions.gsconnect
     ];
 
     # GStreamer en Nautilus
