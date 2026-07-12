@@ -62,7 +62,8 @@
         komikku # Manga reader
         qalculate-gtk
         dialect # Traductor de texto
-        pix #visor de imágenes
+        amberol # Reproductor de música
+        pix # Visor de imágenes
         gimagereader # gui para tesseract-ocr
         identity # comparar imágenes/videos
         czkawka # búsqueda de archivos duplicados
