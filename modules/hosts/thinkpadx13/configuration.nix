@@ -6,7 +6,7 @@
       self.nixosModules.thinkpadx13Programs
       self.nixosModules.basicPC
       # === Entorno de escritorio ===
-      self.nixosModules.cinnamon
+      self.nixosModules.gnome
       self.nixosModules.niri
       self.nixosModules.noctalia
       self.nixosModules.noctaliaBatThresh
@@ -106,8 +106,8 @@
     # Habilitar el sistema de ventanas X11
     services.xserver.enable = true;
 
-    # Display Manager de Cinnamon
-    services.xserver.displayManager.lightdm.enable = true;
+    # Display Manager de GNOME
+    services.displayManager.gdm.enable = true;
 
     # ===================== Sistem state version =====================
 
