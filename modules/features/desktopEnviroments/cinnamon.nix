@@ -8,6 +8,7 @@
 
     # Instalar dependencias y paquetes extra
     environment.systemPackages = with pkgs; [
+      decibels # Reproductor de sonido de GNOME
       snapshot # App de cámara de GNOME
       gnome-system-monitor # Monitor de tareas de GNOME
 
