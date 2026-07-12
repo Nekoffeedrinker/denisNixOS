@@ -9,7 +9,7 @@
       gnome-mines
       gnome-chess
       stockfish # IA de ajedrez
-      gnome-sudoku
+      # gnome-sudoku
       kdePackages.kpat
     ];
 
