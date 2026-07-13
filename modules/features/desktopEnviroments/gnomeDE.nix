@@ -1,5 +1,9 @@
 {...}: {
-  flake.nixosModules.gnome = {pkgs, ...}: {
+  flake.nixosModules.gnome = {
+    pkgs,
+    pkgs-unstable,
+    ...
+  }: {
     # Instalar el entorno de escritorio GNOME
     services.desktopManager.gnome.enable = true;
 
@@ -48,7 +52,8 @@
       gnomeExtensions.launch-new-instance
       gnomeExtensions.pip-on-top
       gnomeExtensions.night-theme-switcher
-      gnomeExtensions.dash-to-panel
+      pkgs-unstable.gnomeExtensions.dash-to-panel
+      pkgs-unstable.gnomeExtensions.arcmenu
       gnomeExtensions.gsconnect
     ];
 
