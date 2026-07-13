@@ -36,6 +36,9 @@
     # Instalar LocalSend
     programs.localsend.enable = true;
 
+    # Instalar Team Viewer
+    services.teamviewer.enable = true;
+
     # Paquetes en Nixpkgs
     environment.systemPackages = with pkgs;
       [
@@ -136,7 +139,7 @@
         origin = "flathub";
       }) [
         # Herramientas Gui
-        "com.parsecgaming.parsec"
+        # "com.parsecgaming.parsec"
         "dev.geopjr.Collision" # Verificar archivos
 
         # General
