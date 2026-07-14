@@ -24,6 +24,7 @@
 
     environment.systemPackages = with pkgs; [
       gnome-tweaks
+      gradia # captuas de pantalla
 
       # Miniaturas de video
       ffmpeg-headless
