@@ -4,7 +4,7 @@
   ...
 }: {
   flake.nixosModules.noctalia = {
-    pkgs,
+    pkgs-unstable,
     mainUser,
     ...
   }: {
@@ -16,7 +16,7 @@
     };
     environment.variables.NOCTALIA_PAM_SERVICE = "noctalia";
 
-    environment.systemPackages = with pkgs; [
+    environment.systemPackages = with pkgs-unstable; [
       inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
       quickshell
 
