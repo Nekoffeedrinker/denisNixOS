@@ -8,6 +8,7 @@
     specialArgs = {
       pkgs-unstable = import inputs.nixpkgs-inestable {
         system = "x86_64-linux";
+        config.allowUnfree = true;
       };
       mainUser = "denis";
     };

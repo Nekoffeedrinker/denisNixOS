@@ -47,7 +47,6 @@
 
         # Herramientas de terminal
         kitty
-        opencode
         fzf # búsqueda chida
         usbutils # trabajar con USB
 
@@ -59,7 +58,6 @@
 
         # General
         obsidian
-        super-productivity
         calibre
         foliate # eBook reader
         komikku # Manga reader
@@ -72,8 +70,6 @@
         czkawka # búsqueda de archivos duplicados
 
         # Real Life
-        zapzap
-        spotify
         blanket # reproducir sonidos ambientales
         shortwave # Sintonizar radios de internet
 
@@ -130,6 +126,10 @@
 
         gitte # cliente GUI de git
         trayscale # GUI para Tailscale
+        opencode
+        zapzap
+        spotify
+        super-productivity
       ]);
 
     # Paquetes en Flathub
