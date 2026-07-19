@@ -52,6 +52,7 @@
       gnomeExtensions.status-tray
       gnomeExtensions.launch-new-instance
       gnomeExtensions.pip-on-top
+      gnomeExtensions.caffeine
       gnomeExtensions.night-theme-switcher
       pkgs-unstable.gnomeExtensions.dash-to-panel
       pkgs-unstable.gnomeExtensions.arcmenu
