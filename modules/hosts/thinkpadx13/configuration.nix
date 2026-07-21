@@ -7,7 +7,7 @@
       self.nixosModules.basicPC
       # === Entorno de escritorio ===
       self.nixosModules.gnome
-      self.nixosModules.niri
+      self.nixosModules.mango
       self.nixosModules.noctalia
       self.nixosModules.noctaliaBatThresh
     ];
