@@ -8,8 +8,7 @@
       # === Entorno de escritorio ===
       self.nixosModules.gnome
       self.nixosModules.mango
-      self.nixosModules.noctalia
-      self.nixosModules.noctaliaBatThresh
+      self.nixosModules.noctaliaV5
     ];
 
     # ===================== Boot =====================
