@@ -1,5 +1,5 @@
 {inputs, ...}: {
-  flake.nixosModules.noctaliaV5 = {...}: {
+  flake.nixosModules.noctaliaV5 = {pkgs-unstable, ...}: {
     imports = [
       inputs.noctalia.nixosModules.default
     ];
@@ -9,6 +9,9 @@
       recommendedServices.enable = true;
     };
 
+    environment.systemPackages = with pkgs-unstable; [
+      satty
+    ];
     programs.kdeconnect.enable = true;
   };
 }
