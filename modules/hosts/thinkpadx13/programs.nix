@@ -146,6 +146,7 @@
         "app.zen_browser.zen"
         "com.brave.Browser"
         "com.bitwarden.desktop"
+        "com.discordapp.Discord"
         "org.gnome.gitlab.somas.Apostrophe"
         "com.mardojai.DiccionarioLengua"
         "io.github.focustimerhq.FocusTimer"
