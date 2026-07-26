@@ -8,10 +8,13 @@
 
     # Activar portal (interfaz para que apps en
     # Wayland accedan a archivos, pantalla, etc.)
-    xdg.portal.enable = true;
-    xdg.portal.extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-    ];
+    xdg.portal = {
+      enable = true;
+      wlr.enable = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-gtk
+      ];
+    };
 
     # Activar polkit (sitema para autorizar
     # aplicaciones para realizar accionces root)
