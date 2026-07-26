@@ -19,7 +19,7 @@
     programs.steam = {
       enable = true;
       protontricks.enable = true;
-      gamescopeSession.enable = true; # Por si hay problemas de escalado o resolución
+      # gamescopeSession.enable = false;
     };
     programs.gamemode.enable = true; # Demonio para mejorar rendimiento
 
