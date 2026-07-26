@@ -55,6 +55,7 @@
         font-manager
         mission-center
         easyeffects
+        file-roller # Abrir archivos comprimidos
 
         # General
         obsidian
