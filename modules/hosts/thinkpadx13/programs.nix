@@ -130,7 +130,6 @@
         opencode
         zapzap
         spotify
-        super-productivity
       ]);
 
     # Paquetes en Flathub
@@ -151,6 +150,7 @@
         "org.gnome.gitlab.somas.Apostrophe"
         "com.mardojai.DiccionarioLengua"
         "io.github.focustimerhq.FocusTimer"
+        "com.super_productivity.SuperProductivity"
         # "io.github.nokse22.asciidraw"
 
         # Audio
