@@ -26,7 +26,6 @@
 
     environment.systemPackages = [
       pkgs.wl-clipboard
-      pkgs.foot
       pkgs.rofi
 
       # Controlar el brillo del monitor
