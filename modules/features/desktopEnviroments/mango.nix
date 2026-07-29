@@ -24,24 +24,27 @@
     # (atajos para pausar y reproducir)
     services.playerctld.enable = true;
 
-    environment.systemPackages = [
-      pkgs.wl-clipboard
-      pkgs.rofi
+    environment.systemPackages = with pkgs; [
+      wl-clipboard
+      rofi
 
       # Controlar el brillo del monitor
-      pkgs.brightnessctl
+      brightnessctl
 
       # Herramienta para ejecutar apps X11 en Wayland
-      pkgs.xwayland-satellite
+      xwayland-satellite
 
       # Temas e iconos
-      pkgs.adwaita-icon-theme
-      pkgs.hicolor-icon-theme
+      adwaita-icon-theme
+      hicolor-icon-theme
 
       # QT
-      pkgs.kdePackages.breeze
-      pkgs.qt6Packages.qt6ct
-      pkgs.libsForQt5.qt5ct
+      kdePackages.breeze
+      qt6Packages.qt6ct
+      libsForQt5.qt5ct
+
+      # Cursor de mouse
+      bibata-cursors
     ];
 
     environment.variables = {
