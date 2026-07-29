@@ -128,8 +128,6 @@
         gitte # cliente GUI de git
         trayscale # GUI para Tailscale
         opencode
-        zapzap
-        spotify
       ]);
 
     # Paquetes en Flathub
@@ -145,8 +143,10 @@
         # General
         "app.zen_browser.zen"
         "com.brave.Browser"
-        "com.bitwarden.desktop"
+        "com.rtosta.zapzap"
         "com.discordapp.Discord"
+        "com.spotify.Client"
+        "com.bitwarden.desktop"
         "org.gnome.gitlab.somas.Apostrophe"
         "com.mardojai.DiccionarioLengua"
         "io.github.focustimerhq.FocusTimer"
