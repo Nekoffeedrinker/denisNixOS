@@ -32,7 +32,6 @@
 
     noctalia = {
       url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs-inestable";
     };
 
     affinity-nix.url = "github:mrshmllow/affinity-nix";
