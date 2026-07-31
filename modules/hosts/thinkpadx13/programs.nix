@@ -76,6 +76,7 @@
 
         # Ofimática
         miktex
+        texlab # LSP de LaTeX
         typst
         tinymist # LSP de typst
         kdePackages.okular
@@ -85,6 +86,7 @@
         zotero
 
         # Código
+        texstudio
         vscode
         meld
         lorem # generador de texto provisional
