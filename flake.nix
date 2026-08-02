@@ -31,7 +31,7 @@
     };
 
     noctalia = {
-      url = "github:noctalia-dev/noctalia";
+      url = "github:noctalia-dev/noctalia/cachix";
     };
 
     affinity-nix.url = "github:mrshmllow/affinity-nix";
