@@ -144,16 +144,20 @@
         "dev.geopjr.Collision" # Verificar archivos
 
         # General
-        "app.zen_browser.zen"
-        "com.brave.Browser"
         "com.rtosta.zapzap"
         "com.discordapp.Discord"
         "com.spotify.Client"
         "com.bitwarden.desktop"
-        "org.gnome.gitlab.somas.Apostrophe"
-        "com.mardojai.DiccionarioLengua"
-        "io.github.focustimerhq.FocusTimer"
+
+        # Navegadores
+        "app.zen_browser.zen"
+        "com.brave.Browser"
+
+        # Productividad
+        "io.github.focustimerhq.focustimer"
         "com.super_productivity.SuperProductivity"
+        "com.mardojai.DiccionarioLengua"
+        "org.gnome.gitlab.somas.Apostrophe"
         # "io.github.nokse22.asciidraw"
 
         # Audio
