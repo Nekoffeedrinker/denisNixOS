@@ -166,6 +166,7 @@
         # Imagen
         "com.icons8.Lunacy"
         "io.github.shonebinu.Defuse"
+        "com.github.tenderowl.frog"
 
         # Teatro
         "org.linuxshowplayer.LinuxShowPlayer"
