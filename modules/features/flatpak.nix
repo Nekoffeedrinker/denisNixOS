@@ -27,6 +27,10 @@
           appId = "com.github.tchx84.Flatseal";
           origin = "flathub";
         }
+        {
+          appId = "io.github.kolunmi.Bazaar";
+          origin = "flathub";
+        }
       ];
     };
   };
