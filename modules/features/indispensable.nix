@@ -57,6 +57,7 @@
       fortune-kind # como una galleta china
       sl # steam locomotive
       nyancat
+      lavat
       # Arte ASCII
       figlet # escrito en letras grandes
       cowsay # una vaca diciendo cosas
