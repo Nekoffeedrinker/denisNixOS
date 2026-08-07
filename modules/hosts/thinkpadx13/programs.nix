@@ -166,6 +166,7 @@
 
         # Imagen
         "com.icons8.Lunacy"
+        "art.fatdawlf.Piccolo"
         "io.github.shonebinu.Defuse"
         "com.github.tenderowl.frog"
 
