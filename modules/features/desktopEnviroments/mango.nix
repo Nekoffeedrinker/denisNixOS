@@ -10,7 +10,13 @@
     # Wayland accedan a archivos, pantalla, etc.)
     xdg.portal = {
       enable = true;
-      wlr.enable = true;
+      wlr = {
+        enable = true;
+        settings.screencast = {
+          chooser_type = "dmenu";
+          chooser_cmd = "${pkgs.rofi}/bin/rofi -dmenu";
+        };
+      };
       extraPortals = with pkgs; [
         xdg-desktop-portal-gtk
       ];
