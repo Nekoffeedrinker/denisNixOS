@@ -130,6 +130,7 @@
         gitte # cliente GUI de git
         trayscale # GUI para Tailscale
         opencode
+        mousam # app del clima
       ]);
 
     # Paquetes en Flathub
