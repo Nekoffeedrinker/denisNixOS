@@ -11,6 +11,7 @@
     # services.displayManager.gdm.enable = true;
 
     environment.gnome.excludePackages = with pkgs; [
+      gnome-software # Tienda de app
       gnome-font-viewer # Tipografías
       gnome-connections # Conexiones
       gnome-contacts # Contactos
@@ -19,7 +20,6 @@
       gnome-tour # Tour
       yelp # Ayuda
       # gnome-system-monitor # Monitor del sistema
-      # gnome-software      # Software
     ];
 
     environment.systemPackages = with pkgs; [
