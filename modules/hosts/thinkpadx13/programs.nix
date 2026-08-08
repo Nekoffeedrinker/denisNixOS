@@ -154,7 +154,7 @@
         "com.brave.Browser"
 
         # Productividad
-        "io.github.focustimerhq.focustimer"
+        "io.github.focustimerhq.FocusTimer"
         "com.super_productivity.SuperProductivity"
         "com.mardojai.DiccionarioLengua"
         "org.gnome.gitlab.somas.Apostrophe"
