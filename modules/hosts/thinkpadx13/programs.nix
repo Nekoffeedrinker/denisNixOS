@@ -142,6 +142,7 @@
         # Herramientas Gui
         # "com.parsecgaming.parsec"
         "dev.geopjr.Collision" # Verificar archivos
+        "io.github.vmkspv.lenspect"
 
         # General
         "com.rtosta.zapzap"
