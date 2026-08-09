@@ -151,7 +151,6 @@
 
         # Navegadores
         "app.zen_browser.zen"
-        "com.brave.Browser"
 
         # Productividad
         "io.github.focustimerhq.FocusTimer"
