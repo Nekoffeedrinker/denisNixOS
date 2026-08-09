@@ -167,6 +167,7 @@
 
         # Video
         "no.mifi.losslesscut"
+        "com.dec05eba.gpu_screen_recorder"
 
         # Imagen
         "com.icons8.Lunacy"
