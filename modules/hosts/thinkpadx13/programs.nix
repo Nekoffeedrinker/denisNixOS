@@ -113,7 +113,6 @@
         # scribus
         switcheroo # Convertir archivos de imagen
         upscayl # Escalar imágenes
-        eyedropper # Obtener un color
         paleta # Paleta de colores de una imágen
         contrast # checar contraste entre colores
 
