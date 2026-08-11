@@ -33,7 +33,7 @@
     ];
 
     boot.resumeDevice = "/dev/nvme0n1p3";
-    boot.kernelParams = ["resume_offset=180275200"];
+    boot.kernelParams = ["resume_offset=42838075"];
 
     nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
     hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
