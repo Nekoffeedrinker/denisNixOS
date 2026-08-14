@@ -186,6 +186,14 @@
             inherit sha256;
           }}";
         }
+        rec {
+          appId = "com.buxjr.melia";
+          sha256 = "05z2iy5294h8ilj8lygm0p2gv6cszjychc6m58znw69lcr3s4j8g";
+          bundle = "${pkgs.fetchurl {
+            url = "https://github.com/buxjr311/melia-app/releases/download/v1.1.325/melia_1.1.325_x64.flatpak";
+            inherit sha256;
+          }}";
+        }
 
         ## Para obtener el hash sha256, ejecuta `nix-prefetch-url` y la url del
         ## flatpak en cuestión, lo que devolverá el path y hash correspondiente.
