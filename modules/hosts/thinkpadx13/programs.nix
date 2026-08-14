@@ -195,13 +195,42 @@
           }}";
         }
 
-        ## Para obtener el hash sha256, ejecuta `nix-prefetch-url` y la url del
-        ## flatpak en cuestión, lo que devolverá el path y hash correspondiente.
-        ## Ejemplo:
-        ##
-        ## ❯ nix-prefetch-url https://github.com/SubtitleEdit/subtitleedit/releases/download/v5.0.0/SubtitleEdit-linux-x64.flatpak
-        ## path is '/nix/store/96hb35gvipy3l0vailpyw78niimcxrwa-SubtitleEdit-linux-x64.flatpak'
-        ## 0s7f34f4y2c2frs348yaf7x0694rrn9w03p86yr6gs32rkk82qzd
+        /*
+
+        Estos `rec` son para instalar flatpak bundles (que pueden ser conjuntos
+        de programas o un solo programa). Esto sirve para instalar algún paquete
+        que no esté dentro de los repositorios de flathub. Gracias a que los
+        flatpak son un formato libre cualqueira puede publicar y distribuir de
+        esta manera.
+
+        Existe una manera para instalarlos desde el disco, pero yo en cambio usé
+        una en la que el paquete se descarga de internet, se valida su hash
+        (para verificar que se descargó el instaldor correcto) y se instala en
+        el sistema.
+
+        Para ello se ocupa:
+
+        - appId: nombre de la aplicación.
+        - url: enlace de internet que inicia la descarga (ojo, no es el sito
+          web, sino el enlace al que clickeas para descargar).
+        - sha256: hash único que verifica que el archivo que descargaste es el
+          correcto y no se corrompió durante la descarga.
+
+        Para obtener el hash sha256, ejecuta `nix-prefetch-url` y la url del
+        flatpak en cuestión, lo que devolverá el path y hash correspondiente.
+        Ejemplo:
+
+        ```
+        ❯ nix-prefetch-url https://github.com/SubtitleEdit/subtitleedit/releases/download/v5.0.0/SubtitleEdit-linux-x64.flatpak
+        path is '/nix/store/96hb35gvipy3l0vailpyw78niimcxrwa-SubtitleEdit-linux-x64.flatpak'
+        0s7f34f4y2c2frs348yaf7x0694rrn9w03p86yr6gs32rkk82qzd
+        ```
+
+        Cabe resaltar que esto instala una versión específica ligada a una
+        release. si quisieramos instalar una versión más nueva, hay que cambiar
+        el url y hash.
+
+        */
       ];
 
     # Some programs need SUID wrappers, can be configured further or are
