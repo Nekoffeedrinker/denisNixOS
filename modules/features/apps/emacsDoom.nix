@@ -34,6 +34,9 @@
 
       # Compilar tree-sitter
       gcc
+
+      # org-roam-graph
+      graphviz
     ];
     # Poder ejecutar los comandos doom
     environment.variables = {
