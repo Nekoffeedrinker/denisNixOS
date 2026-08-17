@@ -54,6 +54,7 @@
       gnomeExtensions.pip-on-top
       gnomeExtensions.caffeine
       gnomeExtensions.night-theme-switcher
+      pkgs-unstable.gnomeExtensions.dash-to-dock
       pkgs-unstable.gnomeExtensions.dash-to-panel
       pkgs-unstable.gnomeExtensions.arcmenu
       gnomeExtensions.gsconnect
