@@ -188,9 +188,9 @@
         }
         rec {
           appId = "com.buxjr.melia";
-          sha256 = "05z2iy5294h8ilj8lygm0p2gv6cszjychc6m58znw69lcr3s4j8g";
+          sha256 = "1x9yhy4dv389c6vnysqvv2ir0c7r8dnykajr9ylmamczygy3qk9q";
           bundle = "${pkgs.fetchurl {
-            url = "https://github.com/buxjr311/melia-app/releases/download/v1.1.325/melia_1.1.325_x64.flatpak";
+            url = "https://github.com/buxjr311/melia-app/releases/download/v1.1.335/melia_1.1.335_x64.flatpak";
             inherit sha256;
           }}";
         }
