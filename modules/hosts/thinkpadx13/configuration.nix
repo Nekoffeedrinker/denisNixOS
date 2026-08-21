@@ -28,14 +28,14 @@
 
     # Entrada de arranque de Zorin OS y Windows
     boot.loader.grub.extraEntries = ''
-      menuentry "PikaOS" {
+      menuentry "Pop OS" {
         insmod part_gpt
         insmod fat
         insmod search_fs_uuid
         insmod chain
         savedefault
         search --fs-uuid --set=root 11C8-1714
-        chainloader /EFI/refind/refind_x64.efi
+        chainloader /EFI/systemd/systemd-bootx64.efi
       }
 
       menuentry "Windows" {
