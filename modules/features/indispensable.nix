@@ -31,6 +31,7 @@
       stow
       git
       delta # pager de git diff
+      gita # manejar múltiples repos
       lazygit
       (yazi.override {
         _7zz = _7zz-rar;
