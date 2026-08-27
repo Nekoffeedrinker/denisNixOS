@@ -155,6 +155,7 @@
         # Productividad
         "io.github.focustimerhq.FocusTimer"
         "com.super_productivity.SuperProductivity"
+        "com.remnote.RemNote"
         "com.mardojai.DiccionarioLengua"
         "org.gnome.gitlab.somas.Apostrophe"
         # "io.github.nokse22.asciidraw"
