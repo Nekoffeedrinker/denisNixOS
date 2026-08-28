@@ -156,6 +156,7 @@
         "io.github.focustimerhq.FocusTimer"
         "com.super_productivity.SuperProductivity"
         "com.remnote.RemNote"
+        "com.logseq.Logseq"
         "com.mardojai.DiccionarioLengua"
         "org.gnome.gitlab.somas.Apostrophe"
         # "io.github.nokse22.asciidraw"
