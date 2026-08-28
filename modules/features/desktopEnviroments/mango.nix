@@ -32,6 +32,7 @@
 
     environment.systemPackages = with pkgs; [
       wl-clipboard
+      wtype # simular teclado
       rofi
 
       # Controlar el brillo del monitor
