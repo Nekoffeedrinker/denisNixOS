@@ -63,6 +63,10 @@
       figlet # escrito en letras grandes
       cowsay # una vaca diciendo cosas
       asciiquarium-transparent
+
+      # Analizar y convertir video
+      mediainfo
+      ffmpeg
     ];
   };
 }
