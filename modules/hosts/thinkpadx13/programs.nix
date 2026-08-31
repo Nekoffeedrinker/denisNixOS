@@ -121,6 +121,7 @@
 
         # Juegos
         prismlauncher # Minecraft
+        lutris
         dolphin-emu
       ]
       ++ (with pkgs-unstable; [
