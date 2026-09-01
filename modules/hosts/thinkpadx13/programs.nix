@@ -183,9 +183,9 @@
       ++ [
         rec {
           appId = "dk.nikse.subtitleedit";
-          sha256 = "0s7f34f4y2c2frs348yaf7x0694rrn9w03p86yr6gs32rkk82qzd";
+          sha256 = "1lgv11bd0m5nzf2zzb6zac8llm306qrlxh2pyxqjhzf9qxnp2z7h";
           bundle = "${pkgs.fetchurl {
-            url = "https://github.com/SubtitleEdit/subtitleedit/releases/download/v5.0.0/SubtitleEdit-linux-x64.flatpak";
+            url = "https://github.com/SubtitleEdit/subtitleedit/releases/download/v5.1.0/SubtitleEdit-linux-x64.flatpak";
             inherit sha256;
           }}";
         }
