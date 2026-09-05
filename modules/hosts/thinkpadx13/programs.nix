@@ -122,7 +122,6 @@
         # Juegos
         prismlauncher # Minecraft
         lutris
-        heroic
         dolphin-emu
       ]
       ++ (with pkgs-unstable; [
@@ -181,6 +180,9 @@
 
         # Teatro
         "org.linuxshowplayer.LinuxShowPlayer"
+
+        # Juegos
+        "com.heroicgameslauncher.hgl"
       ]
       ++ [
         rec {
