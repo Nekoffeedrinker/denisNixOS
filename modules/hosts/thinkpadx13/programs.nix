@@ -159,6 +159,7 @@
         "com.remnote.RemNote"
         "com.logseq.Logseq"
         "com.mardojai.DiccionarioLengua"
+        "io.gitlab.persiangolf.voicegen"
         "org.gnome.gitlab.somas.Apostrophe"
         # "io.github.nokse22.asciidraw"
 
